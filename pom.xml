@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>ru.yandex.practicum</groupId>
-	<artifactId>filmorate</artifactId>
+	<artifactId>Filmorate</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>filmorate</name>
-	<description>filmorate</description>
+	<name>Filmorate</name>
+	<description>Filmorate</description>
 	<properties>
 		<java.version>21</java.version>
 	</properties>
