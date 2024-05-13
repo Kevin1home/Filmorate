@@ -1,6 +1,7 @@
 package ru.yandex.practicum.filmorate.controller;
 
-import lombok.NonNull;
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
 import ru.yandex.practicum.filmorate.excepsions.ValidationException;
@@ -16,20 +17,20 @@ import static ru.yandex.practicum.filmorate.controller.Validator.validateUser;
 @RestController
 @RequestMapping("/users")
 public class UserController {
-    private static final HashMap<Integer, User> users = new HashMap<>();
-    private static int nextId = 1;
+    private final HashMap<Integer, User> users = new HashMap<>();
+    private int nextId = 1;
 
     @GetMapping
-    public static List<User> getAllUsers() {
+    public List<User> getAllUsers() {
 
         log.info("Текущее количество пользователей: {}", users.size());
         return users.values().stream().toList();
     }
 
     @PostMapping
-    public User addUser(@RequestBody @NonNull User user) throws ValidationException {
+    public User addUser(@RequestBody @NotNull @Valid User user) throws ValidationException {
         if (!validateUser(user)) {
-            throw new ValidationException("Валидация параметров пользователя не пройдена",
+            throw new ValidationException("Валидация параметров пользователя не пройдена.",
                     String.valueOf(user));
         }
 
@@ -54,9 +55,9 @@ public class UserController {
     }
 
     @PutMapping
-    public User addOrUpdateUser(@RequestBody @NonNull User user) throws ValidationException {
+    public User updateUser(@RequestBody @NotNull @Valid User user) throws ValidationException {
         if (!validateUser(user)) {
-            throw new ValidationException("Валидация параметров пользователя не пройдена",
+            throw new ValidationException("Валидация параметров пользователя не пройдена.",
                     String.valueOf(user));
         }
 

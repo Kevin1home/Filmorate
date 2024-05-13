@@ -11,4 +11,5 @@ public class ValidationException extends Exception {
     public String getDetailMessage() {
         return getMessage() + " Вы ввели: " + inputValue;
     }
+
 }

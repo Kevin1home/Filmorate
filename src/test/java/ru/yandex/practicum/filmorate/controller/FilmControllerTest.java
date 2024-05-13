@@ -6,18 +6,15 @@ import org.junit.jupiter.api.Test;
 import ru.yandex.practicum.filmorate.excepsions.ValidationException;
 import ru.yandex.practicum.filmorate.model.Film;
 
-import java.time.Duration;
 import java.time.LocalDate;
-
 
 class FilmControllerTest {
 
-    /*private FilmController filmController;
+    private FilmController filmController;
     private Film film1;
     private Film film2;
     private Film film3;
     private Film film4;
-    private Film film5;
 
     @BeforeEach
     public void setUp() {
@@ -26,115 +23,99 @@ class FilmControllerTest {
     }
 
     public void initModel() {
-        film1 = new Film(" ", "Descr", LocalDate.of(1896, 12, 28), 100);
-        String repeatedDescription = "Description".repeat(20);
-        film2 = new Film("Name", repeatedDescription, LocalDate.of(1896, 12, 28), 100);
-        film3 = new Film("Name", "Descr", LocalDate.of(1890, 12, 28), 100);
-        film4 = new Film("Name", "Descr", LocalDate.of(1896, 12, 28), -100);
-        film5 = new Film("Name", "Descr", LocalDate.of(1896, 12, 28), 100);
+        film1 = new Film("Name", "Descr", LocalDate.of(1500, 12, 28));
+        film1.setDuration(100);
+
+        film2 = new Film("Name", "Descr", LocalDate.of(2000, 1, 1));
+        film2.setDuration(100);
+
+        film3 = new Film("Name2", "Descr2", LocalDate.of(1500, 12, 28));
+        film3.setId(1);
+        film3.setDuration(100);
+
+        film4 = new Film("Name2", "Descr2", LocalDate.of(2000, 1, 1));
+        film4.setId(1);
+        film4.setDuration(100);
     }
 
     // testing method addFilm(Film film)
     @Test
-    void shouldThrowValidationExceptionByEmptyNameByAddingMethod() {
+    void shouldThrowValidationExceptionByReleaseDateBefore28121895ByAddingMethod() {
 
         final ValidationException exception = Assertions.assertThrows(
                 ValidationException.class,
                 () -> filmController.addFilm(film1)
         );
 
-        Assertions.assertEquals("Название фильма не может быть пустым.", exception.getMessage());
+        Assertions.assertEquals("Валидация параметров фильма не пройдена.", exception.getMessage());
     }
 
     @Test
-    void shouldThrowValidationExceptionByDescriptionWithMoreAs200CharsByAddingMethod() {
+    void shouldThrowValidationExceptionByAddingExistingFilmByAddingMethod() throws ValidationException {
+
+        filmController.addFilm(film2);
 
         final ValidationException exception = Assertions.assertThrows(
                 ValidationException.class,
                 () -> filmController.addFilm(film2)
         );
 
-        Assertions.assertEquals("Максимальная длина описания — 200 символов.",
-                exception.getMessage());
+        Assertions.assertEquals("Такой фильм уже есть.", exception.getMessage());
     }
 
     @Test
-    void shouldThrowValidationExceptionByReleaseDateAfter28121895ByAddingMethod() {
+    void shouldAddFilmWithRightParameters() throws ValidationException {
 
-        final ValidationException exception = Assertions.assertThrows(
-                ValidationException.class,
-                () -> filmController.addFilm(film3)
-        );
+        filmController.addFilm(film2);
 
-        Assertions.assertEquals("Дата релиза не может быть раньше 28 декабря 1895 года.",
-                exception.getMessage());
+        int expectedSize = 1;
+        int actualSize = filmController.getAllFilms().size();
+
+        Assertions.assertEquals(expectedSize, actualSize);
     }
 
     @Test
-    void shouldThrowValidationExceptionByNegativeDurationByAddingMethod() {
+    // testing method updateFilm(Film film)
+    void shouldThrowValidationExceptionByReleaseDateBefore28121895ByUpdateMethod() throws ValidationException {
+
+        filmController.addFilm(film2);
 
         final ValidationException exception = Assertions.assertThrows(
                 ValidationException.class,
-                () -> filmController.addFilm(film4)
+                () -> filmController.updateFilm(film3)
         );
 
-        Assertions.assertEquals("Продолжительность фильма должна быть положительной.",
-                exception.getMessage());
-    }
-
-    // testing method addOrUpdateFilm(Film film)
-    @Test
-    void shouldThrowValidationExceptionByEmptyNameByAddingOrUpdatingMethod() {
-
-        final ValidationException exception = Assertions.assertThrows(
-                ValidationException.class,
-                () -> filmController.addOrUpdateFilm(film1)
-        );
-
-        Assertions.assertEquals("Название фильма не может быть пустым.", exception.getMessage());
+        Assertions.assertEquals("Валидация параметров фильма не пройдена.", exception.getMessage());
     }
 
     @Test
-    void shouldThrowValidationExceptionByDescriptionWithMoreAs200CharsByAddingOrUpdatingMethod() {
+    void shouldThrowValidationExceptionByUpdatingNotExistingFilmByUpdatingMethod() {
 
         final ValidationException exception = Assertions.assertThrows(
                 ValidationException.class,
-                () -> filmController.addOrUpdateFilm(film2)
+                () -> filmController.updateFilm(film4)
         );
 
-        Assertions.assertEquals("Максимальная длина описания — 200 символов.",
-                exception.getMessage());
+        Assertions.assertEquals("Такого id нет.", exception.getMessage());
     }
 
     @Test
-    void shouldThrowValidationExceptionByReleaseDateAfter28121895ByAddingOrUpdatingMethod() {
+    void shouldUpdateFilmWithRightParameters() throws ValidationException {
 
-        final ValidationException exception = Assertions.assertThrows(
-                ValidationException.class,
-                () -> filmController.addFilm(film3)
-        );
+        filmController.addFilm(film2);
+        filmController.updateFilm(film4);
 
-        Assertions.assertEquals("Дата релиза не может быть раньше 28 декабря 1895 года.",
-                exception.getMessage());
-    }
+        String expectedName = "Name2";
+        String actualName = filmController.getAllFilms().get(0).getName();
 
-    @Test
-    void shouldThrowValidationExceptionByNegativeDurationByAddingOrUpdatingMethod() {
-
-        final ValidationException exception = Assertions.assertThrows(
-                ValidationException.class,
-                () -> filmController.addFilm(film4)
-        );
-
-        Assertions.assertEquals("Продолжительность фильма должна быть положительной.",
-                exception.getMessage());
+        Assertions.assertEquals(expectedName, actualName);
     }
 
     // testing method getAllFilms()
     @Test
     void shouldAddNewFilmByAddingMethod() throws ValidationException {
 
-        filmController.addFilm(film5);
+        filmController.addFilm(film2);
 
         int expectedSize = 1;
         int actualSize = filmController.getAllFilms().size();
@@ -143,26 +124,15 @@ class FilmControllerTest {
     }
 
     @Test
-    void shouldAddNewFilmByAddingOrUpdatingMethod() throws ValidationException {
+    void shouldNotAddNewFilmByUpdatingMethod() throws ValidationException {
 
-        filmController.addOrUpdateFilm(film5);
+        filmController.addFilm(film2);
+        filmController.updateFilm(film4);
 
         int expectedSize = 1;
         int actualSize = filmController.getAllFilms().size();
 
         Assertions.assertEquals(expectedSize, actualSize);
     }
-
-    @Test
-    void shouldNotAddExistingFilmByAddingOrUpdatingMethod() throws ValidationException {
-
-        filmController.addOrUpdateFilm(film5);
-        filmController.addOrUpdateFilm(film5);
-
-        int expectedSize = 1;
-        int actualSize = filmController.getAllFilms().size();
-
-        Assertions.assertEquals(expectedSize, actualSize);
-    }*/
 
 }

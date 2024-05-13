@@ -1,8 +1,11 @@
 package ru.yandex.practicum.filmorate.model;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-import jakarta.validation.constraints.*;
-import lombok.*;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Positive;
+import jakarta.validation.constraints.Size;
+import lombok.Data;
+import lombok.NonNull;
 
 import java.time.LocalDate;
 
@@ -12,7 +15,6 @@ import java.time.LocalDate;
 @Data
 public class Film {
 
-    @Min(value = 1, message = "ID должно быть минимум 1.")
     private int id;
 
     @NonNull
@@ -29,6 +31,6 @@ public class Film {
     private LocalDate releaseDate;
 
     @Positive(message = "Продолжительность не может быть отрицательной.")
-    final private int duration;
+    private int duration;
 
 }

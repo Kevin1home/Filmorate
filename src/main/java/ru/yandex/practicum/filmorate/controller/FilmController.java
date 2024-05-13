@@ -1,6 +1,7 @@
 package ru.yandex.practicum.filmorate.controller;
 
-import lombok.NonNull;
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
 import ru.yandex.practicum.filmorate.excepsions.ValidationException;
@@ -17,21 +18,21 @@ import static ru.yandex.practicum.filmorate.controller.Validator.validateFilm;
 @RequestMapping("/films")
 public class FilmController {
 
-    private static final HashMap<Integer, Film> films = new HashMap<>();
-    private static int nextId = 1;
+    private final HashMap<Integer, Film> films = new HashMap<>();
+    private int nextId = 1;
 
     @GetMapping
-    public static List<Film> getAllFilms() {
+    public List<Film> getAllFilms() {
 
         log.info("Текущее количество фильмов: {}", films.size());
         return films.values().stream().toList();
     }
 
     @PostMapping
-    public Film addFilm(@RequestBody @NonNull Film film) throws ValidationException {
+    public Film addFilm(@RequestBody @NotNull @Valid Film film) throws ValidationException {
 
         if (!validateFilm(film)) {
-            throw new ValidationException("Валидация параметров фильма не пройдена", String.valueOf(film));
+            throw new ValidationException("Валидация параметров фильма не пройдена.", String.valueOf(film));
         }
 
         for (Film filmExisting : films.values()) {
@@ -49,9 +50,9 @@ public class FilmController {
     }
 
     @PutMapping
-    public Film addOrUpdateFilm(@RequestBody @NonNull Film film) throws ValidationException {
+    public Film updateFilm(@RequestBody @NotNull @Valid Film film) throws ValidationException {
         if (!validateFilm(film)) {
-            throw new ValidationException("Валидация параметров фильма не пройдена", String.valueOf(film));
+            throw new ValidationException("Валидация параметров фильма не пройдена.", String.valueOf(film));
         }
 
         if (!films.containsKey(film.getId())) {

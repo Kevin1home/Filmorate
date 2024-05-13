@@ -8,15 +8,13 @@ import ru.yandex.practicum.filmorate.model.User;
 
 import java.time.LocalDate;
 
-
 class UserControllerTest {
 
-   /* UserController userController;
+    UserController userController;
     private User user1;
     private User user2;
     private User user3;
     private User user4;
-    private User user5;
 
     @BeforeEach
     public void setUp() {
@@ -25,92 +23,38 @@ class UserControllerTest {
     }
 
     public void initModel() {
-    user1 = new User(" ", "login", "name",LocalDate.of(2000, 12, 28));
-    user2 = new User("mail@mail.com", " ", "name", LocalDate.of(2000, 12, 28));
-    user3 = new User("mail@mail.com", "login", " ", LocalDate.of(2000, 12, 28));
-    user4 = new User("mail@mail.com", "login", "name", LocalDate.of(2100, 12, 28));
-    user5 = new User("mail@mail.com", "login", "name", LocalDate.of(2000, 12, 28));
+        user1 = new User("mail@mail.com", "login login", LocalDate.of(2000, 1, 1));
+        user1.setName("name");
+
+        user2 = new User("mail@mail.com", "login", LocalDate.of(2000, 1, 1));
+
+        user3 = new User("mail@mail.com", "login", LocalDate.of(2000, 1, 1));
+        user3.setName("name");
+
+        user4 = new User("mail@mail.com", "login2", LocalDate.of(2000, 1, 1));
+        user4.setId(1);
+        user4.setName("name2");
     }
 
     // testing method addUser(User user)
     @Test
-    void shouldThrowValidationExceptionByEmptyEmailByAddingMethod() {
+    void shouldThrowValidationExceptionByLoginWithSpaceByAddingMethod() {
 
         final ValidationException exception = Assertions.assertThrows(
                 ValidationException.class,
                 () -> userController.addUser(user1)
         );
 
-        Assertions.assertEquals("Электронная почта не может быть пустой и должна содержать символ @.", exception.getMessage());
-    }
-
-    @Test
-    void shouldThrowValidationExceptionByEmptyDescriptionByAddingMethod() {
-
-        final ValidationException exception = Assertions.assertThrows(
-                ValidationException.class,
-                () -> userController.addUser(user2)
-        );
-
-        Assertions.assertEquals("Логин не может быть пустым и содержать пробелы.",
-                exception.getMessage());
+        Assertions.assertEquals("Валидация параметров пользователя не пройдена.", exception.getMessage());
     }
 
     @Test
     void shouldWriteNameAsLoginByEmptyNameByAddingMethod() throws ValidationException {
 
-        userController.addUser(user3);
+        userController.addUser(user2);
 
-        String usersLogin = user3.getName();
-        String usersName = user3.getLogin();
-
-        boolean isTrue = usersLogin.equals(usersName);
-
-        Assertions.assertTrue(isTrue);
-    }
-
-    @Test
-    void shouldThrowValidationExceptionByBirthdayInFutureByAddingMethod() {
-
-        final ValidationException exception = Assertions.assertThrows(
-                ValidationException.class,
-                () -> userController.addUser(user4)
-        );
-
-        Assertions.assertEquals("Дата рождения не может быть в будущем.",
-                exception.getMessage());
-    }
-
-    // testing method addOrUpdateUser(User user)
-    @Test
-    void shouldThrowValidationExceptionByEmptyEmailByAddingOrUpdatingMethod() {
-
-        final ValidationException exception = Assertions.assertThrows(
-                ValidationException.class,
-                () -> userController.addOrUpdateUser(user1)
-        );
-
-        Assertions.assertEquals("Электронная почта не может быть пустой и должна содержать символ @.", exception.getMessage());
-    }
-
-    @Test
-    void shouldThrowValidationExceptionByEmptyDescriptionByAddingOrUpdatingMethod() {
-
-        final ValidationException exception = Assertions.assertThrows(
-                ValidationException.class,
-                () -> userController.addOrUpdateUser(user2)
-        );
-
-        Assertions.assertEquals("Логин не может быть пустым и содержать пробелы.",
-                exception.getMessage());
-    }
-
-    @Test
-    void shouldWriteNameAsLoginByEmptyNameByAddingOrUpdatingMethod() throws ValidationException {
-
-        userController.addUser(user3);
-        String usersLogin = user3.getName();
-        String usersName = user3.getLogin();
+        String usersLogin = user2.getName();
+        String usersName = user2.getLogin();
 
         boolean isTrue = usersLogin.equals(usersName);
 
@@ -118,22 +62,82 @@ class UserControllerTest {
     }
 
     @Test
-    void shouldThrowValidationExceptionByByBirthdayInFutureByAddingOrUpdatingMethod() {
+    void shouldThrowValidationExceptionByAddingExistingFilmByAddingMethod() throws ValidationException {
+
+        userController.addUser(user3);
 
         final ValidationException exception = Assertions.assertThrows(
                 ValidationException.class,
-                () -> userController.addUser(user4)
+                () -> userController.addUser(user3)
         );
 
-        Assertions.assertEquals("Дата рождения не может быть в будущем.",
-                exception.getMessage());
+        Assertions.assertEquals("Такой пользователь уже есть.", exception.getMessage());
+    }
+
+    @Test
+    void shouldAddUserWithRightParameters() throws ValidationException {
+
+        userController.addUser(user3);
+
+        int expectedSize = 1;
+        int actualSize = userController.getAllUsers().size();
+
+        Assertions.assertEquals(expectedSize, actualSize);
+    }
+
+    // testing method updateUser(User user)
+
+    @Test
+    void shouldThrowValidationExceptionByLoginWithSpaceByUpdatingMethod() {
+
+        final ValidationException exception = Assertions.assertThrows(
+                ValidationException.class,
+                () -> userController.updateUser(user1)
+        );
+
+        Assertions.assertEquals("Валидация параметров пользователя не пройдена.", exception.getMessage());
+    }
+
+    @Test
+    void shouldWriteNameAsLoginByEmptyNameByUpdatingMethod() throws ValidationException {
+
+        userController.addUser(user2);
+        String usersLogin = user2.getName();
+        String usersName = user2.getLogin();
+
+        boolean isTrue = usersLogin.equals(usersName);
+
+        Assertions.assertTrue(isTrue);
+    }
+
+    @Test
+    void shouldThrowValidationExceptionByUpdatingNotExistingUserByUpdatingMethod() {
+
+        final ValidationException exception = Assertions.assertThrows(
+                ValidationException.class,
+                () -> userController.updateUser(user4)
+        );
+
+        Assertions.assertEquals("Такого id нет.", exception.getMessage());
+    }
+
+    @Test
+    void shouldUpdateUserWithRightParameters() throws ValidationException {
+
+        userController.addUser(user3);
+        userController.updateUser(user4);
+
+        String expectedName = "name2";
+        String actualName = userController.getAllUsers().get(0).getName();
+
+        Assertions.assertEquals(expectedName, actualName);
     }
 
     // testing method getAllUsers()
     @Test
     void shouldAddNewUserByAddingMethod() throws ValidationException {
 
-        userController.addUser(user5);
+        userController.addUser(user3);
 
         int expectedSize = 1;
         int actualSize = userController.getAllUsers().size();
@@ -142,28 +146,15 @@ class UserControllerTest {
     }
 
     @Test
-    void shouldAddNewUserByAddingOrUpdatingMethod() throws ValidationException {
+    void shouldNotAddNewFilmByUpdatingMethod() throws ValidationException {
 
-        userController.addOrUpdateUser(user5);
+        userController.addUser(user3);
+        userController.updateUser(user4);
 
         int expectedSize = 1;
         int actualSize = userController.getAllUsers().size();
 
         Assertions.assertEquals(expectedSize, actualSize);
     }
-
-    @Test
-    void shouldNotAddExistingUserByAddingOrUpdatingMethod() throws ValidationException {
-
-        userController.addOrUpdateUser(user5);
-        userController.addOrUpdateUser(user5);
-
-        int expectedSize = 1;
-        int actualSize = userController.getAllUsers().size();
-
-        Assertions.assertEquals(expectedSize, actualSize);
-    }*/
-
-
 
 }
