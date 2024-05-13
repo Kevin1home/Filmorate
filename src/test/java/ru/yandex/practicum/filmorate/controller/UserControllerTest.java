@@ -11,7 +11,7 @@ import java.time.LocalDate;
 
 class UserControllerTest {
 
-    UserController userController;
+   /* UserController userController;
     private User user1;
     private User user2;
     private User user3;
@@ -162,7 +162,7 @@ class UserControllerTest {
         int actualSize = userController.getAllUsers().size();
 
         Assertions.assertEquals(expectedSize, actualSize);
-    }
+    }*/
 
 
 

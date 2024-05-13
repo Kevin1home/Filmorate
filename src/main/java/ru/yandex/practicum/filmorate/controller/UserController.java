@@ -6,66 +6,71 @@ import org.springframework.web.bind.annotation.*;
 import ru.yandex.practicum.filmorate.excepsions.ValidationException;
 import ru.yandex.practicum.filmorate.model.User;
 
-import java.time.LocalDate;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Objects;
+
+import static ru.yandex.practicum.filmorate.controller.Validator.validateUser;
 
 @Slf4j
 @RestController
 @RequestMapping("/users")
 public class UserController {
-    private final HashMap<Integer, User> users = new HashMap<>();
+    private static final HashMap<Integer, User> users = new HashMap<>();
+    private static int nextId = 1;
 
     @GetMapping
-    public List<User> getAllUsers() {
+    public static List<User> getAllUsers() {
+
         log.info("Текущее количество пользователей: {}", users.size());
         return users.values().stream().toList();
     }
 
     @PostMapping
     public User addUser(@RequestBody @NonNull User user) throws ValidationException {
-        if (user.getEmail().isBlank() || !user.getEmail().contains("@")) {
-            log.warn("ValidationException! Некорректный майл!");
-            throw new ValidationException("Электронная почта не может быть пустой и должна содержать символ @.",
-                    user.getEmail());
-        } else if (user.getLogin().isBlank()) {
-            log.warn("ValidationException! Логин пустой или содержит пробелы!");
-            throw new ValidationException("Логин не может быть пустым и содержать пробелы.", user.getLogin());
-        } else if (user.getName().isBlank()) {
+        if (!validateUser(user)) {
+            throw new ValidationException("Валидация параметров пользователя не пройдена",
+                    String.valueOf(user));
+        }
+
+        for (User userExisting : users.values()) {
+            boolean isEqual = Objects.equals(userExisting.getEmail(), user.getEmail());
+            if (isEqual) {
+                throw new ValidationException("Такой пользователь уже есть.",
+                        String.valueOf(user));
+            }
+        }
+
+        if (user.getName().isBlank()) {
             log.warn("Имя пустое, поэтому используется логин!");
             user.setName(user.getLogin());
-        }else if (user.getBirthday().isAfter(LocalDate.now())) {
-            log.warn("ValidationException! Дата рождения указана в будущем!");
-            throw new ValidationException("Дата рождения не может быть в будущем.",
-                    String.valueOf(user.getBirthday()));
-        } else {
-            users.put(user.getId(), user);
         }
+
+        user.setId(generateId());
+        users.put(user.getId(), user);
+
         log.info("Сохранённый пользователь: {}", user);
         return user;
     }
 
     @PutMapping
     public User addOrUpdateUser(@RequestBody @NonNull User user) throws ValidationException {
-        if (user.getEmail().isBlank() || !user.getEmail().contains("@")) {
-            log.warn("ValidationException! Некорректный майл!");
-            throw new ValidationException("Электронная почта не может быть пустой и должна содержать символ @.",
-                    user.getEmail());
-        } else if (user.getLogin().isBlank()) {
-            log.warn("ValidationException! Логин пустой или содержит пробелы!");
-            throw new ValidationException("Логин не может быть пустым и содержать пробелы.", user.getLogin());
-        } else if (user.getName().isBlank()) {
-            log.warn("Имя пустое, поэтому используется логин!");
-            user.setName(user.getLogin());
-        }else if (user.getBirthday().isAfter(LocalDate.now())) {
-            log.warn("ValidationException! Дата рождения указана в будущем!");
-            throw new ValidationException("Дата рождения не может быть в будущем.",
-                    String.valueOf(user.getBirthday()));
-        } else {
-            users.put(user.getId(), user);
+        if (!validateUser(user)) {
+            throw new ValidationException("Валидация параметров пользователя не пройдена",
+                    String.valueOf(user));
         }
-        log.info("Сохранённый пользователь: {}", user);
+
+        if (!users.containsKey(user.getId())) {
+            throw new ValidationException("Такого id нет.", String.valueOf(user.getId()));
+        }
+        users.put(user.getId(), user);
+
+        log.info("Обновлённый пользователь: {}", user);
         return user;
+    }
+
+    public int generateId() {
+        return nextId++;
     }
 
 }
