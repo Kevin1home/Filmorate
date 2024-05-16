@@ -8,6 +8,8 @@ import lombok.Data;
 import lombok.NonNull;
 
 import java.time.LocalDate;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * Film.
@@ -16,6 +18,8 @@ import java.time.LocalDate;
 public class Film {
 
     private int id;
+
+    private Set<Integer> likes = new HashSet<>();
 
     @NonNull
     @NotBlank(message = "Название не может быть пустым.")

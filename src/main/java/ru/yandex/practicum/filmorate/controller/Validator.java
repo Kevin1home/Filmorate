@@ -9,7 +9,7 @@ import java.time.LocalDate;
 @Slf4j
 public class Validator {
 
-    protected static boolean validateFilm(Film film) {
+    public static boolean validateFilm(Film film) {
         if (film.getReleaseDate().isBefore(LocalDate.of(1895, 12, 28))) {
             log.warn("ValidationException! Дата релиза не должна быть раньше 28 декабря 1895 года.");
             return false;
@@ -17,7 +17,7 @@ public class Validator {
         return true;
     }
 
-    protected static boolean validateUser(User user) {
+    public static boolean validateUser(User user) {
         if (user.getLogin().contains(" ")) {
             log.warn("ValidationException! Логин не должен содержать пробелы.");
             return false;

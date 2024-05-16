@@ -8,11 +8,14 @@ import lombok.Data;
 import lombok.NonNull;
 
 import java.time.LocalDate;
+import java.util.*;
 
 @Data
 public class User {
 
     private int id;
+
+    private Set<Integer> fiends = new HashSet<>();
 
     @NonNull
     @Email(message = "Несоотвествующий формат адреса электронной почты.")

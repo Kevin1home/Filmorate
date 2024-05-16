@@ -2,76 +2,83 @@ package ru.yandex.practicum.filmorate.controller;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
-import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import ru.yandex.practicum.filmorate.excepsions.NotFoundException;
 import ru.yandex.practicum.filmorate.excepsions.ValidationException;
 import ru.yandex.practicum.filmorate.model.User;
+import ru.yandex.practicum.filmorate.service.UserService;
 
-import java.util.HashMap;
 import java.util.List;
-import java.util.Objects;
 
-import static ru.yandex.practicum.filmorate.controller.Validator.validateUser;
-
-@Slf4j
 @RestController
 @RequestMapping("/users")
 public class UserController {
-    private final HashMap<Integer, User> users = new HashMap<>();
-    private int nextId = 1;
+
+    private final UserService userService;
+
+    @Autowired
+    public UserController(UserService userService) {
+        this.userService = userService;
+    }
 
     @GetMapping
     public List<User> getAllUsers() {
-
-        log.info("Текущее количество пользователей: {}", users.size());
-        return users.values().stream().toList();
+        return userService.getUserStorage().getAllUsers().values().stream().toList();
     }
 
     @PostMapping
     public User addUser(@RequestBody @NotNull @Valid User user) throws ValidationException {
-        if (!validateUser(user)) {
-            throw new ValidationException("Валидация параметров пользователя не пройдена.",
-                    String.valueOf(user));
-        }
-
-        for (User userExisting : users.values()) {
-            boolean isEqual = Objects.equals(userExisting.getEmail(), user.getEmail());
-            if (isEqual) {
-                throw new ValidationException("Такой пользователь уже есть.",
-                        String.valueOf(user));
-            }
-        }
-
-        if (user.getName().isBlank()) {
-            log.warn("Имя пустое, поэтому используется логин!");
-            user.setName(user.getLogin());
-        }
-
-        user.setId(generateId());
-        users.put(user.getId(), user);
-
-        log.info("Сохранённый пользователь: {}", user);
-        return user;
+        return userService.getUserStorage().addUser(user);
     }
 
     @PutMapping
     public User updateUser(@RequestBody @NotNull @Valid User user) throws ValidationException {
-        if (!validateUser(user)) {
-            throw new ValidationException("Валидация параметров пользователя не пройдена.",
-                    String.valueOf(user));
-        }
-
-        if (!users.containsKey(user.getId())) {
-            throw new ValidationException("Такого id нет.", String.valueOf(user.getId()));
-        }
-        users.put(user.getId(), user);
-
-        log.info("Обновлённый пользователь: {}", user);
-        return user;
+        return userService.getUserStorage().updateUser(user);
     }
 
-    public int generateId() {
-        return nextId++;
+    @PutMapping("/{id}/friends/{friendId}")
+    public User addFriend(@PathVariable(required = false) Integer id,
+                          @PathVariable(required = false) Integer friendId) {
+        if (id == null || id <= 0) {
+            throw new NotFoundException("userId");
+        }
+        if (friendId == null || friendId <= 0) {
+            throw new NotFoundException("friendId");
+        }
+        return userService.addFriend(id, friendId);
+    }
+
+    @DeleteMapping("/{id}/friends/{friendId}")
+    public User deleteFriend(@PathVariable(required = false) Integer id,
+                             @PathVariable(required = false) Integer friendId) {
+        if (id == null || id <= 0) {
+            throw new NotFoundException("userId");
+        }
+        if (friendId == null || friendId <= 0) {
+            throw new NotFoundException("friendId");
+        }
+        return userService.deleteFriend(id, friendId);
+    }
+
+    @GetMapping("{id}/friends/common/{otherId}")
+    public List<User> findCommonFriends(@PathVariable(required = false) Integer id,
+                                           @PathVariable(required = false) Integer otherId) {
+        if (id == null || id <= 0) {
+            throw new NotFoundException("userId");
+        }
+        if (otherId == null || otherId <= 0) {
+            throw new NotFoundException("otherId");
+        }
+        return userService.findCommonFriends(id, otherId);
+    }
+
+    @GetMapping("{id}/friends")
+    public List<Integer> findFriends(@PathVariable(required = false) Integer id) {
+        if (id == null || id <= 0) {
+            throw new NotFoundException("userId");
+        }
+        return userService.findFriends(id);
     }
 
 }
