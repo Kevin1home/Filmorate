@@ -9,7 +9,6 @@ import ru.yandex.practicum.filmorate.storage.user.UserStorage;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 @Service
 @Slf4j
@@ -27,6 +26,12 @@ public class UserService {
     }
 
     public User addFriend(Integer userId, Integer friendId) {
+        if (userId == null || userId <= 0) {
+            throw new NotFoundException("userId");
+        }
+        if (friendId == null || friendId <= 0) {
+            throw new NotFoundException("friendId");
+        }
         if (!userStorage.getAllUsers().containsKey(userId)) {
             throw new NotFoundException("userId");
         }
@@ -42,6 +47,12 @@ public class UserService {
     }
 
     public User deleteFriend(Integer userId, Integer friendId) {
+        if (userId == null || userId <= 0) {
+            throw new NotFoundException("userId");
+        }
+        if (friendId == null || friendId <= 0) {
+            throw new NotFoundException("friendId");
+        }
         if (!userStorage.getAllUsers().containsKey(userId)) {
             throw new NotFoundException("userId");
         }
@@ -60,6 +71,12 @@ public class UserService {
     }
 
     public List<User> findCommonFriends(Integer userId, Integer otherId) {
+        if (userId == null || userId <= 0) {
+            throw new NotFoundException("userId");
+        }
+        if (otherId == null || otherId <= 0) {
+            throw new NotFoundException("otherId");
+        }
         if (!userStorage.getAllUsers().containsKey(userId)) {
             throw new NotFoundException("userId");
         }
@@ -77,6 +94,9 @@ public class UserService {
     }
 
     public List<Integer> findFriends(Integer userId) {
+        if (userId == null || userId <= 0) {
+            throw new NotFoundException("userId");
+        }
         if (!userStorage.getAllUsers().containsKey(userId)) {
             throw new NotFoundException("userId");
         }

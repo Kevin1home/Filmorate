@@ -8,14 +8,22 @@ import lombok.Data;
 import lombok.NonNull;
 
 import java.time.LocalDate;
-import java.util.*;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Set;
 
+/**
+ * User.
+ */
 @Data
 public class User {
 
     private int id;
 
     private Set<Integer> fiends = new HashSet<>();
+
+    private Map<Integer, Boolean> statusFiend = new HashMap<>();
 
     @NonNull
     @Email(message = "Несоотвествующий формат адреса электронной почты.")

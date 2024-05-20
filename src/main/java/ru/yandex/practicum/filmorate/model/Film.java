@@ -31,6 +31,14 @@ public class Film {
     private String description;
 
     @NonNull
+    @NotBlank(message = "Жанр не может быть пустым.")
+    private Set<Genre> genre;
+
+    @NonNull
+    @NotBlank(message = "Рейтинг не может быть пустым.")
+    private Rating rating;
+
+    @NonNull
     @JsonFormat(pattern = "yyyy-MM-dd")
     private LocalDate releaseDate;
 

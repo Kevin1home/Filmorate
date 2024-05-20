@@ -4,7 +4,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
-import ru.yandex.practicum.filmorate.excepsions.*;
+import ru.yandex.practicum.filmorate.excepsions.NotFoundException;
+import ru.yandex.practicum.filmorate.excepsions.ValidationException;
 
 @RestControllerAdvice
 public class ErrorHandler {
@@ -20,12 +21,6 @@ public class ErrorHandler {
     public ErrorResponse handleValidationException(final ValidationException exception) {
         return new ErrorResponse(exception.getMessage());
     }
-
-    /*@ExceptionHandler
-    @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
-    public ErrorResponse handleOtherExceptions(final Throwable exception) {
-        return new ErrorResponse("Произошла непредвиденная ошибка.");
-    }*/
 
     public class ErrorResponse {
         // название ошибки

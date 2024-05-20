@@ -10,7 +10,6 @@ import ru.yandex.practicum.filmorate.excepsions.ValidationException;
 import ru.yandex.practicum.filmorate.model.Film;
 
 import java.util.HashMap;
-import java.util.List;
 import java.util.Objects;
 
 import static ru.yandex.practicum.filmorate.controller.Validator.validateFilm;
