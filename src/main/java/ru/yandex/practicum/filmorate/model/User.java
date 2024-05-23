@@ -8,10 +8,7 @@ import lombok.Data;
 import lombok.NonNull;
 
 import java.time.LocalDate;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 /**
  * User.
@@ -21,24 +18,32 @@ public class User {
 
     private int id;
 
-    private Set<Integer> fiends = new HashSet<>();
-
-    private Map<Integer, Boolean> statusFiend = new HashMap<>();
-
     @NonNull
-    @Email(message = "Несоотвествующий формат адреса электронной почты.")
-    @NotBlank(message = "Адрес электронной почты не может быть пустым")
-    private String email;
-
-    @NonNull
-    @NotBlank(message = "Логин не может быть пустым.")
+    @NotBlank(message = "Login can not be empty")
     private String login;
 
     private String name = "";
 
     @NonNull
+    @Email(message = "Inappropriate email address format")
+    @NotBlank(message = "Email address cannot be empty")
+    private String email;
+
+    @NonNull
     @JsonFormat(pattern = "yyyy-MM-dd")
-    @PastOrPresent(message = "Дата дня рождения не может быть в будущем.")
+    @PastOrPresent(message = "Birthday date can not be in the future")
     private LocalDate birthday;
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        User user = (User) o;
+        return id == user.id && Objects.equals(login, user.login) && Objects.equals(name, user.name) && Objects.equals(email, user.email) && Objects.equals(birthday, user.birthday);
+    }
+
+    /*@Override
+    public int hashCode() {
+        return Objects.hash(id, login, name, email, birthday);
+    }*/
 }

@@ -1,9 +1,9 @@
 package ru.yandex.practicum.filmorate.model;
 
-public enum Rating {
+public enum RatingType {
     G,
     PG,
-    PG13,
+    PG_13,
     R,
-    NC17
+    NC_17
 }

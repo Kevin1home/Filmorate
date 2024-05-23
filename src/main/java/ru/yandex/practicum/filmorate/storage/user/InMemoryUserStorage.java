@@ -1,79 +1,136 @@
 package ru.yandex.practicum.filmorate.storage.user;
 
-import jakarta.validation.Valid;
-import jakarta.validation.constraints.NotNull;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import ru.yandex.practicum.filmorate.excepsions.NotFoundException;
-import ru.yandex.practicum.filmorate.excepsions.ValidationException;
+import org.springframework.stereotype.Repository;
+import ru.yandex.practicum.filmorate.excepsions.FriendshipAlreadyExistException;
+import ru.yandex.practicum.filmorate.excepsions.FriendshipNotFoundException;
+import ru.yandex.practicum.filmorate.excepsions.UserAlreadyExistException;
+import ru.yandex.practicum.filmorate.excepsions.UserNotFoundException;
+import ru.yandex.practicum.filmorate.model.Friendship;
 import ru.yandex.practicum.filmorate.model.User;
 
+import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Objects;
+import java.util.List;
+import java.util.Optional;
 
-import static ru.yandex.practicum.filmorate.controller.Validator.validateUser;
-
-@Component
+@Repository("inMemoryUserStorage")
 @Slf4j
 public class InMemoryUserStorage implements UserStorage {
 
     private final HashMap<Integer, User> users = new HashMap<>();
-    private int nextId = 1;
+    private int nextUserId = 1;
+    private final HashMap<Integer, Friendship> friendships = new HashMap<>();
+    private int nextFriendshipId = 1;
 
-    @GetMapping
-    public HashMap<Integer, User> getAllUsers() {
-        log.info("Текущее количество пользователей: {}", users.size());
-        return users;
+    @Override
+    public List<User> getAllUsers() {
+        if (users.isEmpty()) {
+            throw new UserNotFoundException("There are no users yet");
+        }
+        log.info("There are {} users found", users.size());
+        return users.values().stream().toList();
     }
 
-    @PostMapping
-    public User addUser(@RequestBody @NotNull @Valid User user) throws ValidationException {
-        if (!validateUser(user)) {
-            throw new ValidationException("Валидация параметров пользователя не пройдена.",
-                    String.valueOf(user));
+    @Override
+    public User getUserById(int id) {
+        if (!users.containsKey(id)) {
+            throw new UserNotFoundException("No user under such ID found");
         }
+        return users.get(id);
+    }
 
-        for (User userExisting : users.values()) {
-            boolean isEqual = Objects.equals(userExisting.getEmail(), user.getEmail());
-            if (isEqual) {
-                throw new ValidationException("Такой пользователь уже есть.",
-                        String.valueOf(user));
+    @Override
+    public User addUser(User user) {
+        for (User existingUser : getAllUsers()) {
+            if (existingUser.getEmail().equals(user.getEmail())) {
+                throw new UserAlreadyExistException("User already exists");
             }
         }
 
-        if (user.getName().isBlank()) {
-            log.warn("Имя пустое, поэтому используется логин!");
-            user.setName(user.getLogin());
-        }
-
-        user.setId(generateId());
+        user.setId(generateUserId());
         users.put(user.getId(), user);
 
-        log.info("Сохранённый пользователь: {}", user);
+        log.info("Saved user: {}", user);
         return user;
     }
 
-    @PutMapping
-    public User updateUser(@RequestBody @NotNull @Valid User user) throws ValidationException {
-        if (!validateUser(user)) {
-            throw new ValidationException("Валидация параметров пользователя не пройдена.",
-                    String.valueOf(user));
-        }
-
+    @Override
+    public User updateUser(User user) {
         if (!users.containsKey(user.getId())) {
-            throw new NotFoundException(String.format("Id под номером %s нет.", user.getId()));
+            throw new UserNotFoundException("No user under such ID found");
         }
         users.put(user.getId(), user);
 
-        log.info("Обновлённый пользователь: {}", user);
+        log.info("Updated user: {}", user);
         return user;
     }
 
-    public int generateId() {
-        return nextId++;
+    @Override
+    public Friendship addFriend(Friendship friendship) {
+        int userId = friendship.getUser().getId();
+        int friendId = friendship.getFriend().getId();
+
+        if (getFriendship(userId, friendId).isPresent()) {
+            throw new FriendshipAlreadyExistException(
+                    String.format("User with ID %s already has a user with ID %s as friend", userId, friendId));
+        }
+
+        friendship.setId(generateFriendshipId());
+        friendships.put(friendship.getId(), friendship);
+
+        log.info("Saved friendship: {}", friendship);
+        return friendship;
+    }
+
+    @Override
+    public void updateFriendship(Friendship friendship) {
+        friendships.put(friendship.getId(), friendship);
+        log.info("Updated friendship: {}", friendship);
+    }
+
+    @Override
+    public Optional<Friendship> getFriendship(int userId, int friendId) {
+        for (Friendship friendship : friendships.values()) {
+            if (friendship.getUser().getId() == userId && friendship.getFriend().getId() == friendId) {
+                return Optional.of(friendship);
+            }
+        }
+        return Optional.empty();
+    }
+
+    @Override
+    public void deleteFriend(Friendship friendship) {
+        friendships.remove(friendship.getId());
+        log.info("Friendship was deleted");
+    }
+
+    @Override
+    public List<User> findFriends(int userId) {
+        if (!users.containsKey(userId)) {
+            throw new UserNotFoundException("No user under such ID found");
+        }
+
+        List<User> friends = new ArrayList<>();
+        for (Friendship friendship : friendships.values()) {
+            if (friendship.getUser().getId() == userId) {
+                friends.add(friendship.getUser());
+            }
+        }
+        if (friends.isEmpty()) {
+            throw new FriendshipNotFoundException("There are no friends yet");
+        }
+
+        log.info("There are {} friends found", friends.size());
+        return friends;
+    }
+
+    public int generateUserId() {
+        return nextUserId++;
+    }
+
+    public int generateFriendshipId() {
+        return nextFriendshipId++;
     }
 }

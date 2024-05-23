@@ -19,30 +19,24 @@ public class Film {
 
     private int id;
 
-    private Set<Integer> likes = new HashSet<>();
-
     @NonNull
-    @NotBlank(message = "Название не может быть пустым.")
+    @NotBlank(message = "Name cannot be empty")
     private String name;
 
     @NonNull
-    @NotBlank(message = "Описание не может быть пустым.")
-    @Size(max = 200, message = "Длина описания не может быть больше 200 символов.")
+    @NotBlank(message = "Description cannot be empty")
+    @Size(max = 200, message = "Description cannot be longer than 200 characters")
     private String description;
 
     @NonNull
-    @NotBlank(message = "Жанр не может быть пустым.")
-    private Set<Genre> genre;
-
-    @NonNull
-    @NotBlank(message = "Рейтинг не может быть пустым.")
-    private Rating rating;
+    @NotBlank(message = "Rating cannot be empty")
+    private RatingType rating;
 
     @NonNull
     @JsonFormat(pattern = "yyyy-MM-dd")
     private LocalDate releaseDate;
 
-    @Positive(message = "Продолжительность не может быть отрицательной.")
+    @Positive(message = "Duration cannot be negative")
     private int duration;
 
 }
