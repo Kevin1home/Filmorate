@@ -10,7 +10,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
-    <groupId>ru.yandex.practicum</groupId>
+    <groupId>com</groupId>
     <artifactId>Filmorate</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>Filmorate</name>
