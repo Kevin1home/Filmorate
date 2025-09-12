@@ -1,7 +1,8 @@
 # Filmorate Application
 
-**Filmorate** is a Spring Boot-based application that allows users to manage films, likes, genres, ratings, and friendships.<br>
-Users can create, update, and retrieve films and users, add likes to films, manage genres and ratings, and handle friendships.<br>
+**Filmorate** is a movie selection service where the main criterion is popularity, determined by the number of user likes.<br>
+Users can view detailed characteristics of each movie, including genre, rating, popularity, description, duration, release date, and title.<br>
+In addition users can actively engage by liking movies and connecting with other users by adding them as friends, making the experience more interactive and social.<br>
 The application provides RESTful APIs for all operations.
 
 ---
@@ -34,47 +35,73 @@ Filmorate/src
 ├── main
 │   ├── java/com/filmorate
 │   │   ├── FilmorateApplication.java
-│   │   ├── exception/
-│   │   │   ├── ErrorHandler.java
+│   │   ├── controller
+│   │   │   ├── FilmController.java
+│   │   │   ├── UserController.java
+│   │   │   └── util
+│   │   │       ├── ErrorHandler.java
+│   │   │       └── ResponseTransfer.java
+│   │   ├── excepsion
+│   │   │   ├── IncorrectParameterException.java
 │   │   │   ├── NotFoundException.java
-│   │   │   └── ValidationException.java
-│   │   ├── model/
+│   │   │   ├── ValidationException.java
+│   │   │   ├── film
+│   │   │   │   ├── FilmAlreadyExistException.java
+│   │   │   │   └── FilmNotFoundException.java
+│   │   │   ├── filmLike
+│   │   │   │   ├── FilmLikeAlreadyExistException.java
+│   │   │   │   └── FilmLikeNotFoundException.java
+│   │   │   ├── friendship
+│   │   │   │   ├── FriendshipAlreadyExistException.java
+│   │   │   │   └── FriendshipNotFoundException.java
+│   │   │   ├── gender
+│   │   │   │   ├── GenreAlreadyExistException.java
+│   │   │   │   └── GenreNotFoundException.java
+│   │   │   ├── rating
+│   │   │   │   └── RatingNotFoundException.java
+│   │   │   └── user
+│   │   │       ├── UserAlreadyExistException.java
+│   │   │       └── UserNotFoundException.java
+│   │   ├── model
 │   │   │   ├── Film.java
 │   │   │   ├── FilmLike.java
+│   │   │   ├── Friendship.java
+│   │   │   ├── Genre.java
 │   │   │   ├── GenreType.java
 │   │   │   ├── RatingType.java
-│   │   │   ├── User.java
-│   │   │   └── Friendship.java
-│   │   ├── storage/
-│   │   │   ├── film/
-│   │   │   │   ├── FilmDbStorage.java
-│   │   │   │   ├── InMemoryFilmStorage.java
-│   │   │   │   └── FilmStorage.java
-│   │   │   └── user/
-│   │   │       ├── UserDbStorage.java
-│   │   │       ├── InMemoryUserStorage.java
-│   │   │       └── UserStorage.java
-│   └── resources/
+│   │   │   └── User.java
+│   │   ├── service
+│   │   │   ├── FilmService.java
+│   │   │   ├── UserService.java
+│   │   │   └── util
+│   │   │       └── Validator.java
+│   │   └── storage
+│   │       ├── film
+│   │       │   ├── FilmDbStorage.java
+│   │       │   ├── FilmStorage.java
+│   │       │   └── InMemoryFilmStorage.java
+│   │       └── user
+│   │           ├── InMemoryUserStorage.java
+│   │           ├── UserDbStorage.java
+│   │           └── UserStorage.java
+│   └── resources
 │       ├── application.properties
 │       └── schema.sql
-└── test/java/ru/yandex/practicum/filmorate
-    ├── film/
-    │   ├── FilmDbStorageTest.java
-    │   └── InMemoryFilmStorageTest.java
-    └── user/
-        ├── UserDbStorageTest.java
-        └── InMemoryUserStorageTest.java
+└── test
+    └── java
+        └── com
+            └── filmorate
+                └── FilmorateApplicationTests.java
 ```
 
 ---
 
 ## Technologies
 
-- Java 17  
-- Spring Boot 3.x  
+- Java 21
+- Spring Boot 3.2.4 
 - Spring JDBC / H2 Database  
-- Lombok  
-- JUnit 5  
+- Lombok
 
 ---
 
@@ -82,7 +109,7 @@ Filmorate/src
 
 1. **Clone repository**  
 ```bash
-git clone <repository_url>
+git clone git@github.com:Kevin1home/Filmorate.git
 cd filmorate
 ```
 
@@ -96,28 +123,7 @@ cd filmorate
 ./mvnw spring-boot:run
 ```
 
-4. **Access API** at `http://localhost:8080/`  
-
----
-
-## Configuration
-
-Database configuration is stored in `application.properties`:
-
-```properties
-# Database Initialization
-spring.sql.init.mode=always
-
-# DataSource
-spring.datasource.url=jdbc:h2:file:./db/filmorate
-spring.datasource.driverClassName=org.h2.Driver
-spring.datasource.username=sa
-spring.datasource.password=password
-
-# Optional H2 Console for development
-# spring.h2.console.enabled=true
-# spring.h2.console.path=/h2-console
-```
+4. **Access API** at `http://localhost:8080/`
 
 ---
 
@@ -127,48 +133,49 @@ spring.datasource.password=password
 ./mvnw test
 ```
 
-Includes unit tests for in-memory storage and DB storage implementations for both films and users.
-
 ---
 
-## API Endpoints
+# API Endpoints
 
-### Users
-- `POST /users` – Create a new user  
-- `GET /users/{id}` – Get user by ID  
-- `GET /users` – List all users  
-- `PATCH /users/{id}` – Update user  
+## Users
+- `POST /users` – Create a new user
+- `GET /users/{id}` – Get user by ID
+- `GET /users` – List all users
+- `PUT /users` – Update user
 
-### Films
-- `POST /films` – Create a new film  
-- `GET /films/{id}` – Get film by ID  
-- `GET /films` – List all films  
-- `PATCH /films/{id}` – Update film  
-- `POST /films/{id}/like/{userId}` – Add like to a film  
-- `DELETE /films/{id}/like/{userId}` – Remove like  
+## Friendships
+- `PUT /users/{id}/friends/{friendId}` – Add friend
+- `DELETE /users/{id}/friends/{friendId}` – Remove friend
+- `GET /users/{id}/friends` – List friends of user
+- `GET /users/{id}/friends/common/{otherId}` – Get common friends between two users
 
-### Genres
-- `GET /genres` – List all genres  
-- `GET /genres/{id}` – Get genre by ID  
-- `GET /films/{id}/genres` – Get genres for a film  
-- `POST /films/{id}/genres` – Add genres to a film  
+## Films
+- `POST /films` – Create a new film
+- `GET /films/{id}` – Get film by ID
+- `GET /films` – List all films
+- `PUT /films` – Update film
 
-### Ratings
-- `GET /ratings` – List all ratings  
-- `GET /ratings/{id}` – Get rating by ID  
-- `GET /films/{id}/rating` – Get rating of a film  
+## Film Likes
+- `GET /films/{id}/like` – List likes for a film
+- `POST /films/{id}/like/{userId}` – Add like to a film
+- `DELETE /films/{id}/like/{userId}` – Remove like
 
-### Popular Films
-- `GET /films/popular?count={count}` – Get top liked/popular films  
+## Popular Films
+- `GET /films/popular?count={count}` – Get top liked/popular films
 
-### Friendships
-- `POST /users/{id}/friends/{friendId}` – Add friend  
-- `DELETE /users/{id}/friends/{friendId}` – Remove friend  
-- `GET /users/{id}/friends` – List friends of user  
+## Genres
+- `GET /films/genres` – List all genres
+- `GET /films/genres/{id}` – Get genre by ID
+- `GET /films/{id}/genres` – Get genres for a film
+- `POST /films/{id}/genres` – Add genres to a film
+
+## Ratings (MPA)
+- `GET /films/mpa` – List all ratings
+- `GET /films/mpa/{id}` – Get rating by ID
+- `GET /films/{id}/mpa` – Get rating of a film
 
 ---
 
 ## License
 
 Released under the **MIT License**.
-

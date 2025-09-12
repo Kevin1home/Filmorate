@@ -1,0 +1,783 @@
+{
+  "project_info": {
+    "name": "src",
+    "path": "C:\\Users\\kevin\\dev\\Filmorate\\src",
+    "generated_at": "2025-09-12T21:42:57.0786517",
+    "total_files": 38,
+    "total_size": 79025
+  },
+  "structure": {
+    "main": {
+      "java": {
+        "com": {
+          "filmorate": {
+            "controller": {
+              "FilmController.java": {
+                "type": "file",
+                "info": {
+                  "size": 4668,
+                  "last_modified": "2025-09-12T21:42:56.8594801",
+                  "mime_type": "text/x-java-source",
+                  "extension": ".java"
+                }
+              },
+              "UserController.java": {
+                "type": "file",
+                "info": {
+                  "size": 3041,
+                  "last_modified": "2025-09-12T21:42:56.8924805",
+                  "mime_type": "text/x-java-source",
+                  "extension": ".java"
+                }
+              },
+              "util": {
+                "ErrorHandler.java": {
+                  "type": "file",
+                  "info": {
+                    "size": 3478,
+                    "last_modified": "2025-09-12T21:42:56.8975063",
+                    "mime_type": "text/x-java-source",
+                    "extension": ".java"
+                  }
+                },
+                "ResponseTransfer.java": {
+                  "type": "file",
+                  "info": {
+                    "size": 208,
+                    "last_modified": "2025-09-12T21:42:56.9045544",
+                    "mime_type": "text/x-java-source",
+                    "extension": ".java"
+                  }
+                }
+              }
+            },
+            "excepsion": {
+              "film": {
+                "FilmAlreadyExistException.java": {
+                  "type": "file",
+                  "info": {
+                    "size": 289,
+                    "last_modified": "2025-09-12T21:42:56.9135",
+                    "mime_type": "text/x-java-source",
+                    "extension": ".java"
+                  }
+                },
+                "FilmNotFoundException.java": {
+                  "type": "file",
+                  "info": {
+                    "size": 291,
+                    "last_modified": "2025-09-12T21:42:56.917058",
+                    "mime_type": "text/x-java-source",
+                    "extension": ".java"
+                  }
+                }
+              },
+              "filmLike": {
+                "FilmLikeAlreadyExistException.java": {
+                  "type": "file",
+                  "info": {
+                    "size": 308,
+                    "last_modified": "2025-09-12T21:42:56.9230597",
+                    "mime_type": "text/x-java-source",
+                    "extension": ".java"
+                  }
+                },
+                "FilmLikeNotFoundException.java": {
+                  "type": "file",
+                  "info": {
+                    "size": 308,
+                    "last_modified": "2025-09-12T21:42:56.9270579",
+                    "mime_type": "text/x-java-source",
+                    "extension": ".java"
+                  }
+                }
+              },
+              "friendship": {
+                "FriendshipAlreadyExistException.java": {
+                  "type": "file",
+                  "info": {
+                    "size": 305,
+                    "last_modified": "2025-09-12T21:42:56.9350581",
+                    "mime_type": "text/x-java-source",
+                    "extension": ".java"
+                  }
+                },
+                "FriendshipNotFoundException.java": {
+                  "type": "file",
+                  "info": {
+                    "size": 277,
+                    "last_modified": "2025-09-12T21:42:56.9380562",
+                    "mime_type": "text/x-java-source",
+                    "extension": ".java"
+                  }
+                }
+              },
+              "gender": {
+                "GenreAlreadyExistException.java": {
+                  "type": "file",
+                  "info": {
+                    "size": 281,
+                    "last_modified": "2025-09-12T21:42:56.944058",
+                    "mime_type": "text/x-java-source",
+                    "extension": ".java"
+                  }
+                },
+                "GenreNotFoundException.java": {
+                  "type": "file",
+                  "info": {
+                    "size": 253,
+                    "last_modified": "2025-09-12T21:42:56.9470556",
+                    "mime_type": "text/x-java-source",
+                    "extension": ".java"
+                  }
+                }
+              },
+              "IncorrectParameterException.java": {
+                "type": "file",
+                "info": {
+                  "size": 385,
+                  "last_modified": "2025-09-12T21:42:56.9520546",
+                  "mime_type": "text/x-java-source",
+                  "extension": ".java"
+                }
+              },
+              "NotFoundException.java": {
+                "type": "file",
+                "info": {
+                  "size": 245,
+                  "last_modified": "2025-09-12T21:42:56.9553456",
+                  "mime_type": "text/x-java-source",
+                  "extension": ".java"
+                }
+              },
+              "rating": {
+                "RatingNotFoundException.java": {
+                  "type": "file",
+                  "info": {
+                    "size": 255,
+                    "last_modified": "2025-09-12T21:42:56.9584604",
+                    "mime_type": "text/x-java-source",
+                    "extension": ".java"
+                  }
+                }
+              },
+              "user": {
+                "UserAlreadyExistException.java": {
+                  "type": "file",
+                  "info": {
+                    "size": 197,
+                    "last_modified": "2025-09-12T21:42:56.9634492",
+                    "mime_type": "text/x-java-source",
+                    "extension": ".java"
+                  }
+                },
+                "UserNotFoundException.java": {
+                  "type": "file",
+                  "info": {
+                    "size": 189,
+                    "last_modified": "2025-09-12T21:42:56.9666003",
+                    "mime_type": "text/x-java-source",
+                    "extension": ".java"
+                  }
+                }
+              },
+              "ValidationException.java": {
+                "type": "file",
+                "info": {
+                  "size": 483,
+                  "last_modified": "2025-09-12T21:42:56.9716305",
+                  "mime_type": "text/x-java-source",
+                  "extension": ".java"
+                }
+              }
+            },
+            "FilmorateApplication.java": {
+              "type": "file",
+              "info": {
+                "size": 643,
+                "last_modified": "2025-09-12T21:42:56.9764282",
+                "mime_type": "text/x-java-source",
+                "extension": ".java"
+              }
+            },
+            "model": {
+              "Film.java": {
+                "type": "file",
+                "info": {
+                  "size": 1708,
+                  "last_modified": "2025-09-12T21:42:56.9804366",
+                  "mime_type": "text/x-java-source",
+                  "extension": ".java"
+                }
+              },
+              "FilmLike.java": {
+                "type": "file",
+                "info": {
+                  "size": 516,
+                  "last_modified": "2025-09-12T21:42:56.9835494",
+                  "mime_type": "text/x-java-source",
+                  "extension": ".java"
+                }
+              },
+              "Friendship.java": {
+                "type": "file",
+                "info": {
+                  "size": 1076,
+                  "last_modified": "2025-09-12T21:42:56.990082",
+                  "mime_type": "text/x-java-source",
+                  "extension": ".java"
+                }
+              },
+              "Genre.java": {
+                "type": "file",
+                "info": {
+                  "size": 1110,
+                  "last_modified": "2025-09-12T21:42:56.9941422",
+                  "mime_type": "text/x-java-source",
+                  "extension": ".java"
+                }
+              },
+              "GenreType.java": {
+                "type": "file",
+                "info": {
+                  "size": 195,
+                  "last_modified": "2025-09-12T21:42:56.9980915",
+                  "mime_type": "text/x-java-source",
+                  "extension": ".java"
+                }
+              },
+              "RatingType.java": {
+                "type": "file",
+                "info": {
+                  "size": 218,
+                  "last_modified": "2025-09-12T21:42:57.0011211",
+                  "mime_type": "text/x-java-source",
+                  "extension": ".java"
+                }
+              },
+              "User.java": {
+                "type": "file",
+                "info": {
+                  "size": 1196,
+                  "last_modified": "2025-09-12T21:42:57.0041214",
+                  "mime_type": "text/x-java-source",
+                  "extension": ".java"
+                }
+              }
+            },
+            "service": {
+              "FilmService.java": {
+                "type": "file",
+                "info": {
+                  "size": 3781,
+                  "last_modified": "2025-09-12T21:42:57.0101227",
+                  "mime_type": "text/x-java-source",
+                  "extension": ".java"
+                }
+              },
+              "UserService.java": {
+                "type": "file",
+                "info": {
+                  "size": 4284,
+                  "last_modified": "2025-09-12T21:42:57.0131269",
+                  "mime_type": "text/x-java-source",
+                  "extension": ".java"
+                }
+              },
+              "util": {
+                "Validator.java": {
+                  "type": "file",
+                  "info": {
+                    "size": 3040,
+                    "last_modified": "2025-09-12T21:42:57.0166523",
+                    "mime_type": "text/x-java-source",
+                    "extension": ".java"
+                  }
+                }
+              }
+            },
+            "storage": {
+              "film": {
+                "FilmDbStorage.java": {
+                  "type": "file",
+                  "info": {
+                    "size": 20149,
+                    "last_modified": "2025-09-12T21:42:57.0236573",
+                    "mime_type": "text/x-java-source",
+                    "extension": ".java"
+                  }
+                },
+                "FilmStorage.java": {
+                  "type": "file",
+                  "info": {
+                    "size": 1293,
+                    "last_modified": "2025-09-12T21:42:57.028656",
+                    "mime_type": "text/x-java-source",
+                    "extension": ".java"
+                  }
+                },
+                "InMemoryFilmStorage.java": {
+                  "type": "file",
+                  "info": {
+                    "size": 9057,
+                    "last_modified": "2025-09-12T21:42:57.0326513",
+                    "mime_type": "text/x-java-source",
+                    "extension": ".java"
+                  }
+                }
+              },
+              "user": {
+                "InMemoryUserStorage.java": {
+                  "type": "file",
+                  "info": {
+                    "size": 4548,
+                    "last_modified": "2025-09-12T21:42:57.0376515",
+                    "mime_type": "text/x-java-source",
+                    "extension": ".java"
+                  }
+                },
+                "UserDbStorage.java": {
+                  "type": "file",
+                  "info": {
+                    "size": 8250,
+                    "last_modified": "2025-09-12T21:42:57.0406515",
+                    "mime_type": "text/x-java-source",
+                    "extension": ".java"
+                  }
+                },
+                "UserStorage.java": {
+                  "type": "file",
+                  "info": {
+                    "size": 763,
+                    "last_modified": "2025-09-12T21:42:57.0436512",
+                    "mime_type": "text/x-java-source",
+                    "extension": ".java"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "resources": {
+        "application.properties": {
+          "type": "file",
+          "info": {
+            "size": 254,
+            "last_modified": "2025-09-12T21:42:57.0556529",
+            "mime_type": "text/x-java-properties",
+            "extension": ".properties"
+          }
+        },
+        "schema.sql": {
+          "type": "file",
+          "info": {
+            "size": 1235,
+            "last_modified": "2025-09-12T21:42:57.0606564",
+            "mime_type": "text/x-sql",
+            "extension": ".sql"
+          }
+        }
+      }
+    },
+    "test": {
+      "java": {
+        "com": {
+          "filmorate": {
+            "FilmorateApplicationTests.java": {
+              "type": "file",
+              "info": {
+                "size": 248,
+                "last_modified": "2025-09-12T21:42:57.0676514",
+                "mime_type": "text/x-java-source",
+                "extension": ".java"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "files": [
+    {
+      "path": "main\\java\\com\\filmorate\\controller\\FilmController.java",
+      "content": "package com.filmorate.controller;\r\n\r\nimport jakarta.validation.Valid;\r\nimport jakarta.validation.constraints.NotNull;\r\nimport lombok.extern.slf4j.Slf4j;\r\nimport org.springframework.web.bind.annotation.*;\r\nimport com.filmorate.controller.util.ResponseTransfer;\r\nimport com.filmorate.model.Film;\r\nimport com.filmorate.model.FilmLike;\r\nimport com.filmorate.model.GenreType;\r\nimport com.filmorate.model.RatingType;\r\nimport com.filmorate.service.FilmService;\r\n\r\nimport java.util.List;\r\n\r\n@Slf4j\r\n@RestController\r\n@RequestMapping(\"/films\")\r\npublic class FilmController {\r\n\r\n    /**\r\n     * REST controller for managing films, likes, genres, and ratings.\r\n     */\r\n    private final FilmService filmService;\r\n\r\n    public FilmController(FilmService filmService) {\r\n        this.filmService = filmService;\r\n    }\r\n\r\n    @GetMapping\r\n    public List<Film> getAllFilms() {\r\n        log.info(\"GET /films — fetching all films\");\r\n        return filmService.getAllFilms();\r\n    }\r\n\r\n    @GetMapping(\"/{id}\")\r\n    public Film getFilmById(@PathVariable(value = \"id\") Integer filmId) {\r\n        log.info(\"GET /films/{} — fetching film by ID\", filmId);\r\n        return filmService.getFilmById(filmId);\r\n    }\r\n\r\n    @PostMapping\r\n    public Film addFilm(@RequestBody @NotNull @Valid Film film) {\r\n        log.info(\"POST /films — adding film: {}\", film.getName());\r\n        return filmService.addFilm(film);\r\n    }\r\n\r\n    @PutMapping\r\n    public Film updateFilm(@RequestBody @NotNull @Valid Film film) {\r\n        log.info(\"PUT /films — updating film: {}\", film.getId());\r\n        return filmService.updateFilm(film);\r\n    }\r\n\r\n    @GetMapping(\"/{id}/like\")\r\n    public List<FilmLike> getLikesByFilmId(@PathVariable(value = \"id\") Integer filmId) {\r\n        log.info(\"GET /films/{}/like — fetching likes\", filmId);\r\n        return filmService.getLikesByFilmId(filmId);\r\n    }\r\n\r\n    @PostMapping(\"/{id}/like/{userId}\")\r\n    public FilmLike addLike(@PathVariable(value = \"id\") Integer filmId,\r\n                            @PathVariable Integer userId) {\r\n        log.info(\"POST /films/{}/like/{} — adding like\", filmId, userId);\r\n        return filmService.addLike(filmId, userId);\r\n    }\r\n\r\n    @DeleteMapping(\"/{id}/like/{userId}\")\r\n    public ResponseTransfer deleteLike(@PathVariable(value = \"id\") Integer filmId,\r\n                                       @PathVariable Integer userId) {\r\n        log.info(\"DELETE /films/{}/like/{} — removing like\", filmId, userId);\r\n        filmService.deleteLike(filmId, userId);\r\n        return new ResponseTransfer(\"Like deleted\");\r\n    }\r\n\r\n    @GetMapping(\"/popular\")\r\n    public List<Film> findMostPopularFilms(@RequestParam(defaultValue = \"10\", required = false) Integer count) {\r\n        log.info(\"GET /films/popular?count={} — fetching most popular films\", count);\r\n        return filmService.findMostPopularFilms(count);\r\n    }\r\n\r\n    @GetMapping(\"/genres\")\r\n    public List<GenreType> findAllGenres() {\r\n        log.info(\"GET /films/genres — fetching all genres\");\r\n        return filmService.findAllGenres();\r\n    }\r\n\r\n    @GetMapping(\"/genres/{id}\")\r\n    public GenreType findGenreById(@PathVariable(value = \"id\") Integer genreId) {\r\n        log.info(\"GET /films/genres/{} — fetching genre by ID\", genreId);\r\n        return filmService.findGenreById(genreId);\r\n    }\r\n\r\n    @GetMapping(\"/{id}/genres\")\r\n    public List<GenreType> findGenreByFilmId(@PathVariable(value = \"id\") Integer filmId) {\r\n        log.info(\"GET /films/{}/genres — fetching genres by film ID\", filmId);\r\n        return filmService.findGenreByFilmId(filmId);\r\n    }\r\n\r\n    @PostMapping(\"/{id}/genres\")\r\n    public List<GenreType> addGenreToFilm(@PathVariable(value = \"id\") Integer filmId,\r\n                                            @RequestBody @NotNull List<String> genreList) {\r\n        log.info(\"POST /films/{}/genres — adding genres: {}\", filmId, genreList);\r\n        return filmService.addGenreToFilm(filmId, genreList);\r\n    }\r\n\r\n    @GetMapping(\"/mpa\")\r\n    public List<RatingType> findAllRatings() {\r\n        log.info(\"GET /films/mpa — fetching all ratings\");\r\n        return filmService.findAllRatings();\r\n    }\r\n\r\n    @GetMapping(\"/mpa/{id}\")\r\n    public RatingType findRatingById(@PathVariable(value = \"id\") Integer ratingId) {\r\n        log.info(\"GET /films/mpa/{} — fetching rating by ID\", ratingId);\r\n        return filmService.findRatingById(ratingId);\r\n    }\r\n\r\n    @GetMapping(\"{id}/mpa\")\r\n    public RatingType findRatingByFilmId(@PathVariable(value = \"id\") Integer filmId) {\r\n        log.info(\"GET /films/{}/mpa — fetching rating by film ID\", filmId);\r\n        return filmService.findRatingByFilmId(filmId);\r\n    }\r\n}\r\n",
+      "info": {
+        "size": 4668,
+        "last_modified": "2025-09-12T21:42:56.8594801",
+        "mime_type": "text/x-java-source",
+        "extension": ".java"
+      }
+    },
+    {
+      "path": "main\\java\\com\\filmorate\\controller\\UserController.java",
+      "content": "package com.filmorate.controller;\r\n\r\nimport jakarta.validation.Valid;\r\nimport jakarta.validation.constraints.NotNull;\r\nimport lombok.extern.slf4j.Slf4j;\r\nimport org.springframework.web.bind.annotation.*;\r\nimport com.filmorate.controller.util.ResponseTransfer;\r\nimport com.filmorate.model.Friendship;\r\nimport com.filmorate.model.User;\r\nimport com.filmorate.service.UserService;\r\n\r\nimport java.util.List;\r\n\r\n/**\r\n * REST controller for managing users and friends.\r\n */\r\n@Slf4j\r\n@RestController\r\n@RequestMapping(\"/users\")\r\npublic class UserController {\r\n\r\n    private final UserService userService;\r\n\r\n    public UserController(UserService userService) {\r\n        this.userService = userService;\r\n    }\r\n\r\n    @GetMapping\r\n    public List<User> getAllUsers() {\r\n        log.info(\"GET /users — fetching all users\");\r\n        return userService.getAllUsers();\r\n    }\r\n\r\n    @GetMapping(\"/{id}\")\r\n    public User getUserById(@PathVariable(value = \"id\") Integer userId) {\r\n        log.info(\"GET /users/{} — fetching user by ID\", userId);\r\n        return userService.getUserById(userId);\r\n    }\r\n\r\n    @PostMapping\r\n    public User addUser(@RequestBody @NotNull @Valid User user) {\r\n        log.info(\"POST /users — adding user: {}\", user.getName());\r\n        return userService.addUser(user);\r\n    }\r\n\r\n    @PutMapping\r\n    public User updateUser(@RequestBody @NotNull @Valid User user) {\r\n        log.info(\"PUT /users — updating user ID: {}\", user.getId());\r\n        return userService.updateUser(user);\r\n    }\r\n\r\n    @PutMapping(\"/{id}/friends/{friendId}\")\r\n    public Friendship addFriend(@PathVariable(value = \"id\") Integer userId,\r\n                                @PathVariable Integer friendId) {\r\n        log.info(\"PUT /{}/friends/{} — adding user: {} new friend: {}\", userId, friendId, userId, friendId);\r\n        return userService.addFriend(userId, friendId);\r\n    }\r\n\r\n    @DeleteMapping(\"/{id}/friends/{friendId}\")\r\n    public ResponseTransfer deleteFriend(@PathVariable(value = \"id\") Integer userId,\r\n                                         @PathVariable Integer friendId) {\r\n        log.info(\"DELETE {}/friends/{} — removing friend: {} by user: {}\", userId, friendId, friendId, userId);\r\n        userService.deleteFriend(userId, friendId);\r\n        return new ResponseTransfer(\"Friend deleted\");\r\n    }\r\n\r\n    @GetMapping(\"{id}/friends/common/{otherId}\")\r\n    public List<User> findCommonFriends(@PathVariable(value = \"id\") Integer userId,\r\n                                        @PathVariable Integer otherId) {\r\n        log.info(\"GET {}/friends/common/{} — fetching all common friends between \" +\r\n                \"user: {} and other user: {}\", userId, otherId, userId, otherId);\r\n        return userService.findCommonFriends(userId, otherId);\r\n    }\r\n\r\n    @GetMapping(\"{id}/friends\")\r\n    public List<User> findFriends(@PathVariable(value = \"id\") Integer userId) {\r\n        log.info(\"GET {}/friends — fetching all friends of user: {}\", userId, userId);\r\n        return userService.findFriends(userId);\r\n    }\r\n}\r\n",
+      "info": {
+        "size": 3041,
+        "last_modified": "2025-09-12T21:42:56.8924805",
+        "mime_type": "text/x-java-source",
+        "extension": ".java"
+      }
+    },
+    {
+      "path": "main\\java\\com\\filmorate\\controller\\util\\ErrorHandler.java",
+      "content": "package com.filmorate.controller.util;\r\n\r\nimport lombok.Getter;\r\nimport org.springframework.http.HttpStatus;\r\nimport org.springframework.web.bind.annotation.ExceptionHandler;\r\nimport org.springframework.web.bind.annotation.ResponseStatus;\r\nimport org.springframework.web.bind.annotation.RestControllerAdvice;\r\nimport com.filmorate.excepsion.*;\r\nimport com.filmorate.excepsion.film.FilmAlreadyExistException;\r\nimport com.filmorate.excepsion.film.FilmNotFoundException;\r\nimport com.filmorate.excepsion.filmLike.FilmLikeNotFoundException;\r\nimport com.filmorate.excepsion.friendship.FriendshipNotFoundException;\r\nimport com.filmorate.excepsion.gender.GenreAlreadyExistException;\r\nimport com.filmorate.excepsion.gender.GenreNotFoundException;\r\nimport com.filmorate.excepsion.rating.RatingNotFoundException;\r\nimport com.filmorate.excepsion.user.UserAlreadyExistException;\r\nimport com.filmorate.excepsion.user.UserNotFoundException;\r\n\r\n/**\r\n * Global error handler for REST controllers.\r\n * Intercepts application-specific exceptions and transforms them into\r\n * consistent error responses with appropriate HTTP status codes.\r\n */\r\n@RestControllerAdvice\r\npublic class ErrorHandler {\r\n\r\n    /**\r\n     * Handles generic \"not found\" exceptions.\r\n     */\r\n    @ExceptionHandler({\r\n            NotFoundException.class,\r\n            UserNotFoundException.class,\r\n            FilmNotFoundException.class,\r\n            FriendshipNotFoundException.class,\r\n            GenreNotFoundException.class,\r\n            RatingNotFoundException.class,\r\n            FilmLikeNotFoundException.class\r\n    })\r\n    @ResponseStatus(HttpStatus.NOT_FOUND)\r\n    public ErrorResponse handleNotFoundExceptions(final RuntimeException exception) {\r\n        return buildErrorResponse(exception);\r\n    }\r\n\r\n    /**\r\n     * Handles validation-related exceptions.\r\n     */\r\n    @ExceptionHandler({ValidationException.class, IncorrectParameterException.class})\r\n    @ResponseStatus(HttpStatus.BAD_REQUEST)\r\n    public ErrorResponse handleValidationExceptions(final RuntimeException exception) {\r\n        if (exception instanceof IncorrectParameterException paramEx) {\r\n            return new ErrorResponse(\"Validation error\",\r\n                    String.format(\"Please check field \\\"%s\\\"\", paramEx.getParameter()));\r\n        }\r\n        return buildErrorResponse(exception);\r\n    }\r\n\r\n    /**\r\n     * Handles \"already exists\" conflicts.\r\n     */\r\n    @ExceptionHandler({UserAlreadyExistException.class, FilmAlreadyExistException.class, GenreAlreadyExistException.class})\r\n    @ResponseStatus(HttpStatus.CONFLICT)\r\n    public ErrorResponse handleConflictExceptions(final RuntimeException exception) {\r\n        return buildErrorResponse(exception);\r\n    }\r\n\r\n    /**\r\n     * Builds a standard error response from an exception.\r\n     */\r\n    private ErrorResponse buildErrorResponse(Exception exception) {\r\n        return new ErrorResponse(exception.getClass().getSimpleName(), exception.getMessage());\r\n    }\r\n\r\n    /**\r\n     * Standardized error response object.\r\n     */\r\n    @Getter\r\n    public static class ErrorResponse {\r\n        private final String error;       // Error type (short name)\r\n        private final String description; // Detailed error message\r\n\r\n        public ErrorResponse(String error) {\r\n            this(error, null);\r\n        }\r\n\r\n        public ErrorResponse(String error, String description) {\r\n            this.error = error;\r\n            this.description = description;\r\n        }\r\n    }\r\n}\r\n",
+      "info": {
+        "size": 3478,
+        "last_modified": "2025-09-12T21:42:56.8975063",
+        "mime_type": "text/x-java-source",
+        "extension": ".java"
+      }
+    },
+    {
+      "path": "main\\java\\com\\filmorate\\controller\\util\\ResponseTransfer.java",
+      "content": "package com.filmorate.controller.util;\r\n\r\n/**\r\n * Standard wrapper for returning simple text responses from the REST API.\r\n * @param text message content\r\n */\r\npublic record ResponseTransfer(String text) {}\r\n",
+      "info": {
+        "size": 208,
+        "last_modified": "2025-09-12T21:42:56.9045544",
+        "mime_type": "text/x-java-source",
+        "extension": ".java"
+      }
+    },
+    {
+      "path": "main\\java\\com\\filmorate\\excepsion\\film\\FilmAlreadyExistException.java",
+      "content": "package com.filmorate.excepsion.film;\r\n\r\n/**\r\n * Exception thrown when trying to add a film that already exists in the system.\r\n */\r\npublic class FilmAlreadyExistException extends RuntimeException {\r\n    public FilmAlreadyExistException(String message) {\r\n        super(message);\r\n    }\r\n}",
+      "info": {
+        "size": 289,
+        "last_modified": "2025-09-12T21:42:56.9135",
+        "mime_type": "text/x-java-source",
+        "extension": ".java"
+      }
+    },
+    {
+      "path": "main\\java\\com\\filmorate\\excepsion\\film\\FilmNotFoundException.java",
+      "content": "package com.filmorate.excepsion.film;\r\n\r\n/**\r\n * Exception thrown when a film cannot be found in the system by its ID or other criteria.\r\n */\r\npublic class FilmNotFoundException extends RuntimeException {\r\n    public FilmNotFoundException(String message) {\r\n        super(message);\r\n    }\r\n}",
+      "info": {
+        "size": 291,
+        "last_modified": "2025-09-12T21:42:56.917058",
+        "mime_type": "text/x-java-source",
+        "extension": ".java"
+      }
+    },
+    {
+      "path": "main\\java\\com\\filmorate\\excepsion\\filmLike\\FilmLikeAlreadyExistException.java",
+      "content": "package com.filmorate.excepsion.filmLike;\r\n\r\n/**\r\n * Exception thrown when trying to add a film like that already exists in the system.\r\n */\r\npublic class FilmLikeAlreadyExistException extends RuntimeException {\r\n    public FilmLikeAlreadyExistException(String message) {\r\n        super(message);\r\n    }\r\n\r\n}",
+      "info": {
+        "size": 308,
+        "last_modified": "2025-09-12T21:42:56.9230597",
+        "mime_type": "text/x-java-source",
+        "extension": ".java"
+      }
+    },
+    {
+      "path": "main\\java\\com\\filmorate\\excepsion\\filmLike\\FilmLikeNotFoundException.java",
+      "content": "package com.filmorate.excepsion.filmLike;\r\n\r\n/**\r\n * Exception thrown when a film like cannot be found in the system by its ID or other criteria.\r\n */\r\npublic class FilmLikeNotFoundException extends RuntimeException {\r\n    public FilmLikeNotFoundException(String message) {\r\n        super(message);\r\n    }\r\n}",
+      "info": {
+        "size": 308,
+        "last_modified": "2025-09-12T21:42:56.9270579",
+        "mime_type": "text/x-java-source",
+        "extension": ".java"
+      }
+    },
+    {
+      "path": "main\\java\\com\\filmorate\\excepsion\\friendship\\FriendshipAlreadyExistException.java",
+      "content": "package com.filmorate.excepsion.friendship;\r\n\r\n/**\r\n * Exception thrown when trying to add a friend that already exists by user.\r\n */\r\npublic class FriendshipAlreadyExistException extends RuntimeException {\r\n    public FriendshipAlreadyExistException(String message) {\r\n        super(message);\r\n    }\r\n\r\n}",
+      "info": {
+        "size": 305,
+        "last_modified": "2025-09-12T21:42:56.9350581",
+        "mime_type": "text/x-java-source",
+        "extension": ".java"
+      }
+    },
+    {
+      "path": "main\\java\\com\\filmorate\\excepsion\\friendship\\FriendshipNotFoundException.java",
+      "content": "package com.filmorate.excepsion.friendship;\r\n\r\n/**\r\n * Exception thrown when a friend cannot be found by user.\r\n */\r\npublic class FriendshipNotFoundException extends RuntimeException {\r\n    public FriendshipNotFoundException(String message) {\r\n        super(message);\r\n    }\r\n}",
+      "info": {
+        "size": 277,
+        "last_modified": "2025-09-12T21:42:56.9380562",
+        "mime_type": "text/x-java-source",
+        "extension": ".java"
+      }
+    },
+    {
+      "path": "main\\java\\com\\filmorate\\excepsion\\gender\\GenreAlreadyExistException.java",
+      "content": "package com.filmorate.excepsion.gender;\r\n\r\n/**\r\n * Exception thrown when trying to add gender that already exists.\r\n */\r\npublic class GenreAlreadyExistException extends RuntimeException {\r\n    public GenreAlreadyExistException(String message) {\r\n        super(message);\r\n    }\r\n\r\n}",
+      "info": {
+        "size": 281,
+        "last_modified": "2025-09-12T21:42:56.944058",
+        "mime_type": "text/x-java-source",
+        "extension": ".java"
+      }
+    },
+    {
+      "path": "main\\java\\com\\filmorate\\excepsion\\gender\\GenreNotFoundException.java",
+      "content": "package com.filmorate.excepsion.gender;\r\n\r\n/**\r\n * Exception thrown when gender cannot be found.\r\n */\r\npublic class GenreNotFoundException extends RuntimeException {\r\n    public GenreNotFoundException(String message) {\r\n        super(message);\r\n    }\r\n}",
+      "info": {
+        "size": 253,
+        "last_modified": "2025-09-12T21:42:56.9470556",
+        "mime_type": "text/x-java-source",
+        "extension": ".java"
+      }
+    },
+    {
+      "path": "main\\java\\com\\filmorate\\excepsion\\IncorrectParameterException.java",
+      "content": "package com.filmorate.excepsion;\r\n\r\n/**\r\n * Exception thrown when a request contains incorrect parameter.\r\n */\r\npublic class IncorrectParameterException extends RuntimeException {\r\n    String parameter;\r\n\r\n    public IncorrectParameterException(String parameter) {\r\n        this.parameter = parameter;\r\n    }\r\n\r\n    public String getParameter() {\r\n        return parameter;\r\n    }\r\n}\r\n",
+      "info": {
+        "size": 385,
+        "last_modified": "2025-09-12T21:42:56.9520546",
+        "mime_type": "text/x-java-source",
+        "extension": ".java"
+      }
+    },
+    {
+      "path": "main\\java\\com\\filmorate\\excepsion\\NotFoundException.java",
+      "content": "package com.filmorate.excepsion;\r\n\r\n/**\r\n * Simple exception thrown when entity cannot be found.\r\n */\r\npublic class NotFoundException extends RuntimeException {\r\n    public NotFoundException(String message) {\r\n        super(message);\r\n    }\r\n}\r\n",
+      "info": {
+        "size": 245,
+        "last_modified": "2025-09-12T21:42:56.9553456",
+        "mime_type": "text/x-java-source",
+        "extension": ".java"
+      }
+    },
+    {
+      "path": "main\\java\\com\\filmorate\\excepsion\\rating\\RatingNotFoundException.java",
+      "content": "package com.filmorate.excepsion.rating;\r\n\r\n/**\r\n * Exception thrown when rating cannot be found.\r\n */\r\npublic class RatingNotFoundException extends RuntimeException {\r\n    public RatingNotFoundException(String message) {\r\n        super(message);\r\n    }\r\n}",
+      "info": {
+        "size": 255,
+        "last_modified": "2025-09-12T21:42:56.9584604",
+        "mime_type": "text/x-java-source",
+        "extension": ".java"
+      }
+    },
+    {
+      "path": "main\\java\\com\\filmorate\\excepsion\\user\\UserAlreadyExistException.java",
+      "content": "package com.filmorate.excepsion.user;\r\n\r\npublic class UserAlreadyExistException extends RuntimeException {\r\n    public UserAlreadyExistException(String message) {\r\n        super(message);\r\n    }\r\n}",
+      "info": {
+        "size": 197,
+        "last_modified": "2025-09-12T21:42:56.9634492",
+        "mime_type": "text/x-java-source",
+        "extension": ".java"
+      }
+    },
+    {
+      "path": "main\\java\\com\\filmorate\\excepsion\\user\\UserNotFoundException.java",
+      "content": "package com.filmorate.excepsion.user;\r\n\r\npublic class UserNotFoundException extends RuntimeException {\r\n    public UserNotFoundException(String message) {\r\n        super(message);\r\n    }\r\n}",
+      "info": {
+        "size": 189,
+        "last_modified": "2025-09-12T21:42:56.9666003",
+        "mime_type": "text/x-java-source",
+        "extension": ".java"
+      }
+    },
+    {
+      "path": "main\\java\\com\\filmorate\\excepsion\\ValidationException.java",
+      "content": "package com.filmorate.excepsion;\r\n\r\n/**\r\n * Exception thrown when a request contains invalid parameter.\r\n */\r\npublic class ValidationException extends RuntimeException {\r\n    private final String inputValue;\r\n\r\n    public ValidationException(final String message, final String inputValue) {\r\n        super(message);\r\n        this.inputValue = inputValue;\r\n    }\r\n\r\n    public String getDetailMessage() {\r\n        return getMessage() + \" Вы ввели: \" + inputValue;\r\n    }\r\n\r\n}\r\n",
+      "info": {
+        "size": 483,
+        "last_modified": "2025-09-12T21:42:56.9716305",
+        "mime_type": "text/x-java-source",
+        "extension": ".java"
+      }
+    },
+    {
+      "path": "main\\java\\com\\filmorate\\FilmorateApplication.java",
+      "content": "package com.filmorate;\r\n\r\nimport lombok.extern.slf4j.Slf4j;\r\nimport org.springframework.boot.SpringApplication;\r\nimport org.springframework.boot.autoconfigure.SpringBootApplication;\r\n\r\n/**\r\n * Entry point for the Filmorate application.<br>\r\n * This class bootstraps the Spring Boot application and starts the embedded server.\r\n */\r\n@Slf4j\r\n@SpringBootApplication\r\npublic class FilmorateApplication {\r\n    public static void main(String[] args) {\r\n        log.info(\"Starting FilmorateApplication...\");\r\n        SpringApplication.run(FilmorateApplication.class, args);\r\n        log.info(\"FilmorateApplication started successfully!\");\r\n    }\r\n}\r\n",
+      "info": {
+        "size": 643,
+        "last_modified": "2025-09-12T21:42:56.9764282",
+        "mime_type": "text/x-java-source",
+        "extension": ".java"
+      }
+    },
+    {
+      "path": "main\\java\\com\\filmorate\\model\\Film.java",
+      "content": "package com.filmorate.model;\r\n\r\nimport com.fasterxml.jackson.annotation.JsonFormat;\r\nimport jakarta.validation.constraints.NotBlank;\r\nimport jakarta.validation.constraints.NotNull;\r\nimport jakarta.validation.constraints.Positive;\r\nimport jakarta.validation.constraints.Size;\r\nimport lombok.Data;\r\n\r\nimport java.time.LocalDate;\r\n\r\n/**\r\n * Represents a film in the application.\r\n * <p>\r\n * Contains main metadata such as:\r\n * <ul>\r\n *   <li>id – unique identifier of the film</li>\r\n *   <li>name – title of the film</li>\r\n *   <li>description – short description (max 200 chars)</li>\r\n *   <li>rating – age rating (e.g. G, PG, R)</li>\r\n *   <li>releaseDate – official release date</li>\r\n *   <li>duration – duration in minutes (must be positive)</li>\r\n * </ul>\r\n */\r\n@Data\r\npublic class Film {\r\n\r\n    private int id;\r\n\r\n    @NotBlank(message = \"Name cannot be empty\")\r\n    private String name;\r\n\r\n    @NotBlank(message = \"Description cannot be empty\")\r\n    @Size(max = 200, message = \"Description cannot be longer than 200 characters\")\r\n    private String description;\r\n\r\n    @NotNull(message = \"Rating cannot be null\")\r\n    private RatingType rating;\r\n\r\n    @NotNull(message = \"Release date cannot be null\")\r\n    @JsonFormat(pattern = \"yyyy-MM-dd\")\r\n    private LocalDate releaseDate;\r\n\r\n    @Positive(message = \"Duration cannot be negative\")\r\n    private int duration;\r\n\r\n    public Film(int id, String name, String description, RatingType rating, LocalDate releaseDate, int duration) {\r\n        this.id = id;\r\n        this.name = name;\r\n        this.description = description;\r\n        this.rating = rating;\r\n        this.releaseDate = releaseDate;\r\n        this.duration = duration;\r\n    }\r\n}\r\n",
+      "info": {
+        "size": 1708,
+        "last_modified": "2025-09-12T21:42:56.9804366",
+        "mime_type": "text/x-java-source",
+        "extension": ".java"
+      }
+    },
+    {
+      "path": "main\\java\\com\\filmorate\\model\\FilmLike.java",
+      "content": "package com.filmorate.model;\r\n\r\nimport lombok.EqualsAndHashCode;\r\nimport lombok.Getter;\r\nimport lombok.ToString;\r\n\r\n/**\r\n * Represents a \"like\" relation between a {@link User} and a {@link Film}.\r\n * <p>\r\n * Each instance means that a specific user liked a specific film.\r\n */\r\n@Getter\r\n@ToString\r\n@EqualsAndHashCode\r\npublic class FilmLike {\r\n\r\n    private final Film film;\r\n    private final User user;\r\n\r\n    public FilmLike(Film film, User user) {\r\n        this.film = film;\r\n        this.user = user;\r\n    }\r\n}\r\n",
+      "info": {
+        "size": 516,
+        "last_modified": "2025-09-12T21:42:56.9835494",
+        "mime_type": "text/x-java-source",
+        "extension": ".java"
+      }
+    },
+    {
+      "path": "main\\java\\com\\filmorate\\model\\Friendship.java",
+      "content": "package com.filmorate.model;\r\n\r\nimport lombok.Getter;\r\nimport lombok.Setter;\r\nimport lombok.ToString;\r\n\r\n/**\r\n * Represents a friendship relationship between two users.\r\n * <p>\r\n * Each instance contains:\r\n * <ul>\r\n *   <li>user – the user who sent the friend request</li>\r\n *   <li>friend – the user who confirms the friendship</li>\r\n *   <li>status – true if confirmed, false otherwise</li>\r\n * </ul>\r\n */\r\n@Getter\r\n@Setter\r\n@ToString\r\npublic class Friendship {\r\n    private Integer id;\r\n    private final User user; // User who sends the friend request\r\n    private final User friend; // User who confirms the friendship\r\n    private Boolean status; // Friendship status: true = confirmed, false = pending\r\n\r\n    public Friendship(User user, User friend, boolean status) {\r\n        this.user = user;\r\n        this.friend = friend;\r\n        this.status = status;\r\n    }\r\n\r\n    public Friendship(int id, User user, User friend, boolean status) {\r\n        this.id = id;\r\n        this.user = user;\r\n        this.friend = friend;\r\n        this.status = status;\r\n    }\r\n}\r\n",
+      "info": {
+        "size": 1076,
+        "last_modified": "2025-09-12T21:42:56.990082",
+        "mime_type": "text/x-java-source",
+        "extension": ".java"
+      }
+    },
+    {
+      "path": "main\\java\\com\\filmorate\\model\\Genre.java",
+      "content": "package com.filmorate.model;\r\n\r\nimport lombok.Getter;\r\nimport lombok.Setter;\r\n\r\nimport java.util.HashSet;\r\nimport java.util.Set;\r\n\r\n/**\r\n * Represents a genre of films.<br>\r\n * Each instance contains a genre type and a set of films that belong to this genre.\r\n */\r\n// TODO: to implement methods\r\n@Getter\r\n@Setter\r\npublic class Genre {\r\n\r\n    private final GenreType genreType;\r\n    private final Set<Film> films;\r\n\r\n    public Genre(GenreType genreType, Set<Film> films) {\r\n        this.genreType = genreType;\r\n        this.films = (films != null) ? films : new HashSet<>();\r\n    }\r\n\r\n    /**\r\n     * Adds a film to this genre.\r\n     *\r\n     * @param film the film to add\r\n     * @return true if the film was added, false if it was already present\r\n     */\r\n    public boolean addFilm(Film film) {\r\n        return films.add(film);\r\n    }\r\n\r\n    /**\r\n     * Removes a film from this genre.\r\n     *\r\n     * @param film the film to remove\r\n     * @return true if the film was removed, false if it was not present\r\n     */\r\n    public boolean removeFilm(Film film) {\r\n        return films.remove(film);\r\n    }\r\n}\r\n",
+      "info": {
+        "size": 1110,
+        "last_modified": "2025-09-12T21:42:56.9941422",
+        "mime_type": "text/x-java-source",
+        "extension": ".java"
+      }
+    },
+    {
+      "path": "main\\java\\com\\filmorate\\model\\GenreType.java",
+      "content": "package com.filmorate.model;\r\n\r\n/**\r\n * Enumeration of possible film genres.\r\n */\r\npublic enum GenreType {\r\n    COMEDY,\r\n    DRAMA,\r\n    CARTOON,\r\n    THRILLER,\r\n    DOCUMENTARY,\r\n    ACTION\r\n}\r\n",
+      "info": {
+        "size": 195,
+        "last_modified": "2025-09-12T21:42:56.9980915",
+        "mime_type": "text/x-java-source",
+        "extension": ".java"
+      }
+    },
+    {
+      "path": "main\\java\\com\\filmorate\\model\\RatingType.java",
+      "content": "package com.filmorate.model;\r\n\r\n/**\r\n * Enumeration of MPA film ratings.<br>\r\n * Used to indicate the appropriate audience for a film.\r\n */\r\npublic enum RatingType {\r\n    G,\r\n    PG,\r\n    PG_13,\r\n    R,\r\n    NC_17\r\n}\r\n",
+      "info": {
+        "size": 218,
+        "last_modified": "2025-09-12T21:42:57.0011211",
+        "mime_type": "text/x-java-source",
+        "extension": ".java"
+      }
+    },
+    {
+      "path": "main\\java\\com\\filmorate\\model\\User.java",
+      "content": "package com.filmorate.model;\r\n\r\nimport com.fasterxml.jackson.annotation.JsonFormat;\r\nimport jakarta.validation.constraints.Email;\r\nimport jakarta.validation.constraints.NotBlank;\r\nimport jakarta.validation.constraints.NotNull;\r\nimport jakarta.validation.constraints.PastOrPresent;\r\nimport lombok.Data;\r\n\r\nimport java.time.LocalDate;\r\n\r\n/**\r\n * Represents a user in the system.<br>\r\n * Each user has a unique ID, login, name, email, and birthday.\r\n */\r\n@Data\r\npublic class User {\r\n\r\n    private int id;\r\n\r\n    @NotNull\r\n    @NotBlank(message = \"Login can not be empty\")\r\n    private String login;\r\n\r\n    @NotNull\r\n    private String name = \"\";\r\n\r\n    @NotNull\r\n    @NotBlank(message = \"Email address cannot be empty\")\r\n    @Email(message = \"Inappropriate email address format\")\r\n    private String email;\r\n\r\n    @JsonFormat(pattern = \"yyyy-MM-dd\")\r\n    @PastOrPresent(message = \"Birthday date can not be in the future\")\r\n    private LocalDate birthday;\r\n\r\n    public User(int id, String login, String name, String email, LocalDate birthday) {\r\n        this.id = id;\r\n        this.login = login;\r\n        this.name = name;\r\n        this.email = email;\r\n        this.birthday = birthday;\r\n    }\r\n}\r\n",
+      "info": {
+        "size": 1196,
+        "last_modified": "2025-09-12T21:42:57.0041214",
+        "mime_type": "text/x-java-source",
+        "extension": ".java"
+      }
+    },
+    {
+      "path": "main\\java\\com\\filmorate\\service\\FilmService.java",
+      "content": "package com.filmorate.service;\r\n\r\nimport lombok.extern.slf4j.Slf4j;\r\nimport org.springframework.beans.factory.annotation.Qualifier;\r\nimport org.springframework.stereotype.Service;\r\nimport com.filmorate.service.util.Validator;\r\nimport com.filmorate.excepsion.IncorrectParameterException;\r\nimport com.filmorate.excepsion.NotFoundException;\r\nimport com.filmorate.model.Film;\r\nimport com.filmorate.model.FilmLike;\r\nimport com.filmorate.model.GenreType;\r\nimport com.filmorate.model.RatingType;\r\nimport com.filmorate.storage.film.FilmStorage;\r\n\r\nimport java.util.List;\r\n\r\n/**\r\n * Service class for managing films, likes, genres, and ratings.<br>\r\n * Handles validation and delegates storage operations to {@link FilmStorage}.\r\n */\r\n@Service\r\n@Slf4j\r\npublic class FilmService {\r\n    private final FilmStorage filmStorage;\r\n\r\n    public FilmService(@Qualifier(\"filmDbStorage\") FilmStorage filmStorage) {\r\n        this.filmStorage = filmStorage;\r\n    }\r\n\r\n    public List<Film> getAllFilms() {\r\n        return filmStorage.getAllFilms();\r\n    }\r\n\r\n    public Film getFilmById(Integer filmId) {\r\n        Validator.validateId(filmId, \"filmId\");\r\n        return filmStorage.getFilmById(filmId);\r\n    }\r\n\r\n    public Film addFilm(Film film) {\r\n        Validator.validateFilm(film);\r\n        return filmStorage.addFilm(film);\r\n    }\r\n\r\n    public Film updateFilm(Film film) {\r\n        Validator.validateFilm(film);\r\n        return filmStorage.updateFilm(film);\r\n    }\r\n\r\n    public List<FilmLike> getLikesByFilmId(Integer filmId) {\r\n        Validator.validateId(filmId, \"filmId\");\r\n        return filmStorage.getLikesByFilmId(filmId);\r\n    }\r\n\r\n\r\n    public FilmLike addLike(Integer filmId, Integer userId) {\r\n        Validator.validateId(filmId, \"filmId\");\r\n        Validator.validateId(userId, \"userId\");\r\n\r\n        return filmStorage.addLike(filmId, userId);\r\n    }\r\n\r\n    public void deleteLike(Integer filmId, Integer userId) {\r\n        Validator.validateId(filmId, \"filmId\");\r\n        Validator.validateId(userId, \"userId\");\r\n\r\n        filmStorage.deleteLike(filmId, userId);\r\n        log.info(\"User with ID {} removed like from film with ID {}\", userId, filmId);\r\n    }\r\n\r\n    public List<Film> findMostPopularFilms(int count) {\r\n        if (count <= 0) {\r\n            log.warn(\"IncorrectParameterException! Count is negative: {}\", count);\r\n            throw new IncorrectParameterException(\"count\");\r\n        }\r\n        return filmStorage.findMostPopularFilms(count);\r\n    }\r\n\r\n    public List<GenreType> findAllGenres() {\r\n        return filmStorage.findAllGenres();\r\n    }\r\n\r\n    public GenreType findGenreById(Integer genreId) {\r\n        Validator.validateId(genreId, \"genreId\");\r\n        return filmStorage.findGenreById(genreId);\r\n    }\r\n\r\n    public List<GenreType> findGenreByFilmId(Integer filmId) {\r\n        Validator.validateId(filmId, \"filmId\");\r\n        return filmStorage.findGenreByFilmId(filmId);\r\n    }\r\n\r\n    public List<GenreType> addGenreToFilm(Integer filmId, List<String> genreList) {\r\n        Validator.validateId(filmId, \"filmId\");\r\n        if (genreList == null || genreList.isEmpty()) {\r\n            log.warn(\"NotFoundException! GenreList is empty or null\");\r\n            throw new NotFoundException(\"GenreList is empty or null\");\r\n        }\r\n        return filmStorage.addGenreToFilm(filmId, genreList);\r\n    }\r\n\r\n    public List<RatingType> findAllRatings() {\r\n        return filmStorage.findAllRatings();\r\n    }\r\n\r\n    public RatingType findRatingById(Integer ratingId) {\r\n        Validator.validateId(ratingId, \"ratingId\");\r\n        return filmStorage.findRatingById(ratingId);\r\n    }\r\n\r\n    public RatingType findRatingByFilmId(Integer filmId) {\r\n        Validator.validateId(filmId, \"filmId\");\r\n        return filmStorage.findRatingById(filmId);\r\n    }\r\n}\r\n",
+      "info": {
+        "size": 3781,
+        "last_modified": "2025-09-12T21:42:57.0101227",
+        "mime_type": "text/x-java-source",
+        "extension": ".java"
+      }
+    },
+    {
+      "path": "main\\java\\com\\filmorate\\service\\UserService.java",
+      "content": "package com.filmorate.service;\r\n\r\nimport lombok.extern.slf4j.Slf4j;\r\nimport org.springframework.beans.factory.annotation.Qualifier;\r\nimport org.springframework.stereotype.Service;\r\nimport com.filmorate.excepsion.friendship.FriendshipNotFoundException;\r\nimport com.filmorate.service.util.Validator;\r\nimport com.filmorate.model.Friendship;\r\nimport com.filmorate.model.User;\r\nimport com.filmorate.storage.user.UserStorage;\r\n\r\nimport java.util.*;\r\n\r\n/**\r\n * Service class for managing users and friendships.<br>\r\n * Handles user validation, friendships and common friends calculation.\r\n */\r\n@Slf4j\r\n@Service\r\npublic class UserService {\r\n\r\n    private final UserStorage userStorage;\r\n\r\n    public UserService(@Qualifier(\"userDbStorage\")UserStorage userStorage) {\r\n        this.userStorage = userStorage;\r\n    }\r\n\r\n    public List<User> getAllUsers() {\r\n        return userStorage.getAllUsers();\r\n    }\r\n\r\n    public User getUserById(Integer userId) {\r\n        Validator.validateId(userId, \"userId\");\r\n        return userStorage.getUserById(userId);\r\n    }\r\n\r\n    public User addUser(User user) {\r\n        Validator.validateUser(user);\r\n\r\n        if (user.getName().isBlank()) {\r\n            log.warn(\"Name is blank, using login '{}' as name\", user.getLogin());\r\n            user.setName(user.getLogin());\r\n        }\r\n\r\n        return userStorage.addUser(user);\r\n    }\r\n\r\n    public User updateUser(User user) {\r\n        Validator.validateUser(user);\r\n        return userStorage.updateUser(user);\r\n    }\r\n\r\n    public Friendship addFriend(Integer userId, Integer friendId) {\r\n        Validator.validateId(userId, \"userId\");\r\n        Validator.validateId(friendId, \"friendId\");\r\n\r\n        User user = userStorage.getUserById(userId);\r\n        User friend = userStorage.getUserById(friendId);\r\n\r\n        Optional<Friendship> friendIdUserId = userStorage.getFriendship(friendId, userId); // reverse friendship\r\n\r\n        if (friendIdUserId.isPresent()) {\r\n            Friendship updatedFriendship  = new Friendship(friendIdUserId.get().getId(), user, friend, true);\r\n            userStorage.updateFriendship(updatedFriendship );\r\n        }\r\n\r\n        Friendship newFriendship = new Friendship(user, friend, true);\r\n        return userStorage.addFriend(newFriendship);\r\n    }\r\n\r\n    public void deleteFriend(Integer userId, Integer friendId) {\r\n        Validator.validateId(userId, \"userId\");\r\n        Validator.validateId(friendId, \"friendId\");\r\n\r\n        User user = userStorage.getUserById(userId);\r\n        User friend = userStorage.getUserById(friendId);\r\n\r\n        Optional<Friendship> userIdFriendId = userStorage.getFriendship(userId, friendId);\r\n        Optional<Friendship> friendIdUserId = userStorage.getFriendship(friendId, userId); // reverse friendship\r\n\r\n        if (userIdFriendId.isEmpty()) {\r\n            log.info(\"User with ID {} does not contain user with ID {} in friends\", userId, friendId);\r\n            throw new FriendshipNotFoundException(\r\n                    String.format(\"User with ID %s has not a user with ID %s as friend\", userId, friendId));\r\n        }\r\n        if (friendIdUserId.isPresent()) { // and userIdFriendId is Present\r\n            Friendship friendshipFriend = new Friendship(friendIdUserId.get().getId(), user, friend, false);\r\n            userStorage.updateFriendship(friendshipFriend); // change existing friendship by Friend\r\n        }\r\n\r\n        userStorage.deleteFriend(userIdFriendId.get()); // delete friendship by User\r\n    }\r\n\r\n    public List<User> findCommonFriends(Integer userId, Integer otherId) {\r\n        Validator.validateId(userId, \"userId\");\r\n        Validator.validateId(otherId, \"otherId\");\r\n\r\n        Set<User> friendsOfUser = new HashSet<>(userStorage.findFriends(userId));\r\n        List<User> commonFriends = new ArrayList<>();\r\n\r\n        for (User friend : userStorage.findFriends(otherId)) {\r\n            if (friendsOfUser.contains(friend)) {\r\n                commonFriends.add(friend);\r\n            }\r\n        }\r\n\r\n        log.info(\"Total common friends between {} and {}: {}\", userId, otherId, commonFriends.size());\r\n        return commonFriends;\r\n    }\r\n\r\n    public List<User> findFriends(Integer userId) {\r\n        Validator.validateId(userId, \"userId\");\r\n        return userStorage.findFriends(userId);\r\n    }\r\n}\r\n",
+      "info": {
+        "size": 4284,
+        "last_modified": "2025-09-12T21:42:57.0131269",
+        "mime_type": "text/x-java-source",
+        "extension": ".java"
+      }
+    },
+    {
+      "path": "main\\java\\com\\filmorate\\service\\util\\Validator.java",
+      "content": "package com.filmorate.service.util;\r\n\r\nimport lombok.AccessLevel;\r\nimport lombok.NoArgsConstructor;\r\nimport lombok.extern.slf4j.Slf4j;\r\nimport com.filmorate.excepsion.IncorrectParameterException;\r\nimport com.filmorate.excepsion.NotFoundException;\r\nimport com.filmorate.excepsion.ValidationException;\r\nimport com.filmorate.model.Film;\r\nimport com.filmorate.model.User;\r\n\r\nimport java.time.LocalDate;\r\n\r\n/**\r\n * Utility class for validating Film and User objects.\r\n */\r\n@Slf4j\r\n@NoArgsConstructor(access = AccessLevel.PRIVATE)\r\npublic class Validator {\r\n\r\n    private static final LocalDate FIRST_FILM_DATE = LocalDate.of(1895, 12, 28);\r\n\r\n    /**\r\n     * Validates a film's release date.\r\n     *\r\n     * @param film the film to validate\r\n     * @throws ValidationException if release date is before 28 December 1895\r\n     */\r\n    public static void validateFilm(Film film) {\r\n        if (film == null) {\r\n            log.warn(\"ValidationException! Film is null\");\r\n            throw new ValidationException(\"Film cannot be null\", \"null\");\r\n        }\r\n\r\n        if (film.getReleaseDate() == null) {\r\n            log.warn(\"ValidationException! Film release date is null: {}\", film);\r\n            throw new ValidationException(\"Release date cannot be null\", String.valueOf(film));\r\n        }\r\n\r\n        if (film.getReleaseDate().isBefore(FIRST_FILM_DATE)) {\r\n            log.warn(\"ValidationException! Release date {} is earlier than 28 December 1895\", film.getReleaseDate());\r\n            throw new ValidationException(\"Release date cannot be earlier than 28 December 1895\",\r\n                    String.valueOf(film));\r\n        }\r\n    }\r\n\r\n    /**\r\n     * Validates an ID.\r\n     *\r\n     * @param id the ID to validate\r\n     * @param belongTo the name of the entity (used in exception messages)\r\n     * @throws NotFoundException if ID is null\r\n     * @throws IncorrectParameterException if ID is zero or negative\r\n     */\r\n    public static void validateId(Integer id, String belongTo) {\r\n        if (id == null) {\r\n            log.warn(\"ValidationException! {} is empty\", belongTo);\r\n            throw new NotFoundException(\"No \" + belongTo + \" found in request\");\r\n        }\r\n        if (id <= 0) {\r\n            log.warn(\"ValidationException! {} is negative\", belongTo);\r\n            throw new IncorrectParameterException(belongTo);\r\n        }\r\n    }\r\n\r\n    /**\r\n     * Validates a user's login.\r\n     *\r\n     * @param user the user to validate\r\n     * @throws ValidationException if login contains whitespace\r\n     */\r\n    public static void validateUser(User user) {\r\n        if (user == null) {\r\n            log.warn(\"ValidationException! User is null\");\r\n            throw new ValidationException(\"User cannot be null\", \"null\");\r\n        }\r\n\r\n        if (user.getLogin() == null || user.getLogin().contains(\" \")) {\r\n            log.warn(\"ValidationException! Login should not contain whitespaces\");\r\n            throw new ValidationException(\"Login contains whitespaces\",\r\n                    String.valueOf(user));\r\n        }\r\n    }\r\n}\r\n",
+      "info": {
+        "size": 3040,
+        "last_modified": "2025-09-12T21:42:57.0166523",
+        "mime_type": "text/x-java-source",
+        "extension": ".java"
+      }
+    },
+    {
+      "path": "main\\java\\com\\filmorate\\storage\\film\\FilmDbStorage.java",
+      "content": "package com.filmorate.storage.film;\r\n\r\nimport lombok.extern.slf4j.Slf4j;\r\nimport org.springframework.beans.factory.annotation.Autowired;\r\nimport org.springframework.beans.factory.annotation.Qualifier;\r\nimport org.springframework.jdbc.core.JdbcTemplate;\r\nimport org.springframework.jdbc.support.GeneratedKeyHolder;\r\nimport org.springframework.jdbc.support.KeyHolder;\r\nimport org.springframework.stereotype.Repository;\r\nimport com.filmorate.excepsion.*;\r\nimport com.filmorate.excepsion.film.FilmAlreadyExistException;\r\nimport com.filmorate.excepsion.film.FilmNotFoundException;\r\nimport com.filmorate.excepsion.filmLike.FilmLikeAlreadyExistException;\r\nimport com.filmorate.excepsion.filmLike.FilmLikeNotFoundException;\r\nimport com.filmorate.excepsion.friendship.FriendshipNotFoundException;\r\nimport com.filmorate.excepsion.gender.GenreNotFoundException;\r\nimport com.filmorate.excepsion.rating.RatingNotFoundException;\r\nimport com.filmorate.model.*;\r\nimport com.filmorate.storage.user.UserStorage;\r\n\r\nimport java.sql.Date;\r\nimport java.sql.PreparedStatement;\r\nimport java.sql.ResultSet;\r\nimport java.sql.SQLException;\r\nimport java.time.LocalDate;\r\nimport java.util.List;\r\nimport java.util.Objects;\r\nimport java.util.Optional;\r\n\r\n/**\r\n * Implementation of {@link FilmStorage} that works with a relational database using {@link JdbcTemplate}.\r\n * <p>\r\n * Responsible for CRUD operations with films, likes, genres, and ratings.\r\n * Performs SQL queries to retrieve and modify data in tables:\r\n * <ul>\r\n *     <li>film</li>\r\n *     <li>film_like</li>\r\n *     <li>genre</li>\r\n *     <li>film_genre</li>\r\n *     <li>rating</li>\r\n * </ul>\r\n */\r\n@Slf4j\r\n@Repository(\"filmDbStorage\")\r\npublic class FilmDbStorage implements FilmStorage {\r\n\r\n    @Autowired\r\n    @Qualifier(\"userDbStorage\")\r\n    private UserStorage userStorage;\r\n    @Autowired\r\n    private final JdbcTemplate jdbcTemplate;\r\n\r\n    public FilmDbStorage(JdbcTemplate jdbcTemplate) {\r\n        this.jdbcTemplate = jdbcTemplate;\r\n    }\r\n\r\n    @Override\r\n    public List<Film> getAllFilms() {\r\n        String sql = \"SELECT f.name, f.description, r.name, f.release_date, f.duration \" +\r\n                \"FROM film AS f \" +\r\n                \"LEFT OUTER JOIN rating AS r ON f.rating_id=r.id \" +\r\n                \"ORDER BY f.name\";\r\n        List<Film> allFilms = jdbcTemplate.query(sql, (rs, rowNum) -> makeFilm(rs));\r\n\r\n        log.info(\"There are {} films found\", allFilms.size());\r\n        return allFilms;\r\n    }\r\n\r\n    @Override\r\n    public Film getFilmById(int id) {\r\n        String sql = \"SELECT f.name, f.description, r.name, f.release_date, f.duration \" +\r\n                \"FROM film AS f \" +\r\n                \"LEFT OUTER JOIN rating AS r ON f.rating_id=r.id \" +\r\n                \"WHERE f.id=?\";\r\n        List<Film> filmList = jdbcTemplate.query(sql, (rs, rowNum) -> makeFilm(rs), id);\r\n\r\n        if (filmList.isEmpty()) {\r\n            throw new FilmNotFoundException(\"No film under such ID found\");\r\n        }\r\n        return filmList.getLast();\r\n    }\r\n\r\n    @Override\r\n    public Film addFilm(Film film) {\r\n        for (Film existingFilm : getAllFilms()) {\r\n            if (existingFilm.getName().equals(film.getName())\r\n                    && existingFilm.getReleaseDate().equals(film.getReleaseDate())) {\r\n                throw new FilmAlreadyExistException(\"Film already exists\");\r\n            }\r\n        }\r\n\r\n        String sql = \"INSERT INTO film (name, description, rating_id, release_date, duration) \" +\r\n                     \"VALUES (?, ?, ?, ?, ?)\";\r\n        String name = film.getName();\r\n        String description = film.getDescription();\r\n        int ratingId = findIdByRatingType(film.getRating());\r\n        Date releaseDate = Date.valueOf(film.getReleaseDate());\r\n        int duration = film.getDuration();\r\n\r\n        KeyHolder keyHolder = new GeneratedKeyHolder();\r\n        int qnt = jdbcTemplate.update(connection -> {\r\n            PreparedStatement stmt = connection.prepareStatement(sql, new String[]{\"id\"});\r\n            stmt.setString(1, name);\r\n            stmt.setString(2, description);\r\n            stmt.setInt(3, ratingId);\r\n            stmt.setDate(4, releaseDate);\r\n            stmt.setInt(5, duration);\r\n            return stmt;\r\n        }, keyHolder);\r\n        log.info(\"Added {} new records to table film\", qnt);\r\n\r\n        int id = Objects.requireNonNull(keyHolder.getKey()).intValue();\r\n        film.setId(id);\r\n        return film;\r\n    }\r\n\r\n    @Override\r\n    public Film updateFilm(Film film) {\r\n        getFilmById(film.getId()); // for checking whether exists\r\n\r\n        String sql = \"UPDATE film \" +\r\n                     \"SET name=?, description=?, rating_id=?, release_date=?, duration=? \" +\r\n                     \"WHERE id=?\";\r\n        String name = film.getName();\r\n        String description = film.getDescription();\r\n        int ratingId = findIdByRatingType(film.getRating());\r\n        Date releaseDate = Date.valueOf(film.getReleaseDate());\r\n        int duration = film.getDuration();\r\n        int id = film.getId();\r\n\r\n        int qnt = jdbcTemplate.update(sql, name, description, ratingId, releaseDate, duration, id);\r\n        log.info(\"Updated {} records by table film\", qnt);\r\n\r\n        return film;\r\n    }\r\n\r\n    @Override\r\n    public List<FilmLike> getLikesByFilmId(int filmId) {\r\n        getFilmById(filmId); // for checking whether exists\r\n\r\n        String sql = \"SELECT * FROM film_like WHERE film_id=?\";\r\n        List<FilmLike> allFilmLikes = jdbcTemplate.query(sql, (rs, rowNum) -> makeFilmLike(rs), filmId);\r\n\r\n        if (allFilmLikes.isEmpty()) {\r\n            throw new FilmLikeNotFoundException(\"There are no filmLikes yet\");\r\n        }\r\n        log.info(\"There are {} filmLikes found\", allFilmLikes.size());\r\n        return allFilmLikes;\r\n    }\r\n\r\n    @Override\r\n    public Optional<FilmLike> getFilmLike(int filmId, int userId) {\r\n        String sql = \"SELECT * FROM film_like WHERE film_id=? AND user_id=?\";\r\n        List<FilmLike> filmLikeList = jdbcTemplate.query(sql, (rs, rowNum) -> makeFilmLike(rs), filmId, userId);\r\n\r\n        if (filmLikeList.isEmpty()) {\r\n            return Optional.empty();\r\n        }\r\n        return Optional.of(filmLikeList.getLast());\r\n    }\r\n\r\n    @Override\r\n    public FilmLike addLike(int filmId, int userId) {\r\n        getFilmById(filmId); // for checking whether exists\r\n        userStorage.getUserById(userId); // for checking whether exists\r\n\r\n        if (getFilmLike(filmId, userId).isPresent()) {\r\n            throw new FilmLikeAlreadyExistException(\r\n                    String.format(\"User with ID %s already has added like to film with ID %s\", userId, filmId));\r\n        }\r\n\r\n        String sql = \"INSERT INTO film_like (film_id, user_id) \" +\r\n                     \"VALUES (?, ?)\";\r\n\r\n        int qnt = jdbcTemplate.update(sql, filmId, userId);\r\n        log.info(\"Added {} new records to table film_like\", qnt);\r\n\r\n        Optional<FilmLike> newFilmLike = getFilmLike(filmId, userId);\r\n        if (newFilmLike.isEmpty()) {\r\n            log.error(\"FilmLike from user {} to film {} not found after adding to DB!\", userId, filmId);\r\n            throw new FriendshipNotFoundException(\r\n                    String.format(\"Error by adding new FilmLike from user %s to film %s\", userId, filmId));\r\n        }\r\n        return newFilmLike.get();\r\n    }\r\n\r\n    @Override\r\n    public void deleteLike(int filmId, int userId) {\r\n        getFilmById(filmId); // for checking whether exists\r\n        userStorage.getUserById(userId); // for checking whether exists\r\n\r\n        if (getFilmLike(filmId, userId).isEmpty()) {\r\n            throw new FilmLikeNotFoundException(\r\n                    String.format(\"User with ID %s has no like by film with ID %s\", userId, filmId));\r\n        }\r\n\r\n        String sql = \"DELETE FROM film_like WHERE film_id=? AND user_id=?\";\r\n\r\n        int qnt = jdbcTemplate.update(sql, filmId, userId);\r\n        log.info(\"Deleted {} records from table friendship\", qnt);\r\n    }\r\n\r\n    @Override\r\n    public List<Film> findMostPopularFilms(int count) {\r\n        String sql = \"SELECT f.name, f.description, r.name, f.release_date, f.duration, COUNT(fl.film_id) AS likes \" +\r\n                     \"FROM film AS f \" +\r\n                     \"LEFT OUTER JOIN rating AS r ON f.rating_id=r.id \" +\r\n                     \"LEFT OUTER JOIN film_like AS fl ON f.id=fl.film_id \" +\r\n                     \"GROUP BY f.id \" +\r\n                     \"ORDER BY likes DESC \" +\r\n                     \"LIMIT ?\";\r\n        List<Film> allFilms = jdbcTemplate.query(sql, (rs, rowNum) -> makeFilm(rs), count);\r\n\r\n        if (allFilms.isEmpty()) {\r\n            throw new FilmNotFoundException(\"There are no films yet\");\r\n        }\r\n        log.info(\"There are {} films found\", allFilms.size());\r\n        return allFilms;\r\n    }\r\n\r\n    @Override\r\n    public List<GenreType> findAllGenres() {\r\n        String sql = \"SELECT name \" +\r\n                     \"FROM genre \" +\r\n                     \"ORDER BY name\";\r\n        List<String> allGenresString = jdbcTemplate.query(sql, (rs, rowNum) -> rs.getString(\"name\"));\r\n        if (allGenresString.isEmpty()) {\r\n            throw new GenreNotFoundException(\"There are no genres yet\");\r\n        }\r\n\r\n        List<GenreType> allGenres = allGenresString.stream()\r\n                .map(this::transformGenreNameToGenreType)\r\n                .toList();\r\n\r\n        log.info(\"There are {} genres found\", allGenres.size());\r\n        return allGenres;\r\n    }\r\n\r\n    @Override\r\n    public GenreType findGenreById(int genreId) {\r\n        String sql = \"SELECT name \" +\r\n                     \"FROM genre \" +\r\n                     \"WHERE id=?\";\r\n        List<String> genreListString = jdbcTemplate.query(sql, (rs, rowNum) -> rs.getString(\"name\"), genreId);\r\n\r\n        if (genreListString.isEmpty()) {\r\n            throw new GenreNotFoundException(\"No genres under ID \" + genreId + \" found\");\r\n        }\r\n\r\n        List<GenreType> genreList = genreListString.stream()\r\n                .map(this::transformGenreNameToGenreType)\r\n                .toList();\r\n\r\n        return genreList.getLast();\r\n    }\r\n\r\n    @Override\r\n    public List<GenreType> findGenreByFilmId(int filmId) {\r\n        String sql = \"SELECT g.name \" +\r\n                     \"FROM genre AS g \" +\r\n                     \"RIGHT OUTER JOIN film_genre AS fg ON g.id=fg.genre_id \" +\r\n                     \"WHERE fg.film_id=? \" +\r\n                     \"ORDER BY g.name\";\r\n        List<String> genresString = jdbcTemplate.query(sql, (rs, rowNum) -> rs.getString(\"name\"), filmId);\r\n        if (genresString.isEmpty()) {\r\n            throw new GenreNotFoundException(\"There are no genres by film ID \" + filmId);\r\n        }\r\n\r\n        List<GenreType> genres = genresString.stream()\r\n                .map(this::transformGenreNameToGenreType)\r\n                .toList();\r\n\r\n        log.info(\"There are {} genres found\", genres.size());\r\n        return genres;\r\n    }\r\n\r\n    @Override\r\n    public List<GenreType> addGenreToFilm(int filmId, List<String> genreList) {\r\n\r\n        for (String genreString : genreList) {\r\n            GenreType genre = transformGenreNameToGenreType(genreString); // checking list with genre for wrong writing\r\n            int genre_id = findIdByGenreType(genre);\r\n\r\n            String sql = \"INSERT INTO film_genre (film_id, genre_id) \" +\r\n                         \"VALUES (?, ?)\";\r\n            int qnt = jdbcTemplate.update(sql, filmId, genre_id);\r\n            log.info(\"Added {} new records to table film_like\", qnt);\r\n        }\r\n        return findGenreByFilmId(filmId);\r\n    }\r\n\r\n    @Override\r\n    public List<RatingType> findAllRatings() {\r\n        String sql = \"SELECT name \" +\r\n                     \"FROM rating \" +\r\n                     \"ORDER BY name\";\r\n        List<String> allRatingsString = jdbcTemplate.query(sql, (rs, rowNum) -> rs.getString(\"name\"));\r\n        if (allRatingsString.isEmpty()) {\r\n            throw new RatingNotFoundException(\"There are no ratings yet\");\r\n        }\r\n\r\n        List<RatingType> allRatings = allRatingsString.stream()\r\n                .map(this::transformRatingNameToRatingType)\r\n                .toList();\r\n\r\n        log.info(\"There are {} ratings found\", allRatings.size());\r\n        return allRatings;\r\n    }\r\n\r\n    @Override\r\n    public RatingType findRatingById(int ratingId) {\r\n        String sql = \"SELECT name \" +\r\n                     \"FROM rating \" +\r\n                     \"WHERE id=?\";\r\n        List<String> ratingListString = jdbcTemplate.query(sql, (rs, rowNum) -> rs.getString(\"name\"), ratingId);\r\n\r\n        if (ratingListString.isEmpty()) {\r\n            throw new RatingNotFoundException(\"No ratings under ID \" + ratingId + \" found\");\r\n        }\r\n\r\n        List<RatingType> ratingList = ratingListString.stream()\r\n                .map(this::transformRatingNameToRatingType)\r\n                .toList();\r\n\r\n        return ratingList.getLast();\r\n    }\r\n\r\n    @Override\r\n    public RatingType findRatingByFilmId(int filmId) {\r\n        String sql = \"SELECT r.name AS name \" +\r\n                     \"FROM rating AS r \" +\r\n                     \"INNER JOIN film AS f ON r.id=f.rating_id \" +\r\n                     \"WHERE f.id=?\";\r\n        List<String> ratingStringList = jdbcTemplate.query(sql, (rs, rowNum) -> rs.getString(\"name\"), filmId);\r\n        if (ratingStringList.isEmpty()) {\r\n            throw new RatingNotFoundException(\"There are no rating by film ID \" + filmId);\r\n        }\r\n        String ratingString = ratingStringList.getLast();\r\n        RatingType rating = transformRatingNameToRatingType(ratingString);\r\n\r\n        log.info(\"Film with ID {} has rating {}\", filmId, rating);\r\n        return rating;\r\n    }\r\n\r\n    //-----------------------\r\n    //Private helpers methods\r\n    //-----------------------\r\n\r\n    /**\r\n     * Maps a single row from {@link ResultSet} to a {@link FilmLike} object.\r\n     *\r\n     * @param rs ResultSet containing data from the film_like table\r\n     * @return a FilmLike object (film + user)\r\n     * @throws SQLException if an error occurs while reading the ResultSet\r\n     */\r\n    private FilmLike makeFilmLike(ResultSet rs) throws SQLException {\r\n        int userId = rs.getInt(\"user_id\");\r\n        int filmId = rs.getInt(\"film_id\");\r\n\r\n        Film film = getFilmById(filmId);\r\n        User user = userStorage.getUserById(userId);\r\n\r\n        return new FilmLike(film, user);\r\n    }\r\n\r\n    /**\r\n     * Maps a single row from {@link ResultSet} to a {@link Film} object.\r\n     *\r\n     * @param rs ResultSet containing data from the film table\r\n     * @return a Film object\r\n     * @throws SQLException if an error occurs while reading the ResultSet\r\n     */\r\n    private Film makeFilm(ResultSet rs) throws SQLException {\r\n        int id = rs.getInt(\"id\");\r\n        String name = rs.getString(\"name\");\r\n        String description = rs.getString(\"description\");\r\n        String ratingName = rs.getString(\"rating_name\");\r\n        RatingType rating = transformRatingNameToRatingType(ratingName);\r\n        LocalDate releaseDate = rs.getDate(\"release_date\").toLocalDate();\r\n        int duration = rs.getInt(\"duration\");\r\n\r\n        return new Film(id, name, description, rating, releaseDate, duration);\r\n    }\r\n\r\n    /**\r\n     * Finds the ID of a rating in the database by its enum value.\r\n     *\r\n     * @param ratingType value of {@link RatingType}\r\n     * @return numeric ID of the rating from the database\r\n     * @throws NotFoundException if the rating does not exist in the database\r\n     */\r\n    private int findIdByRatingType(RatingType ratingType) {\r\n        String ratingName = transformRatingTypeToRatingName(ratingType);\r\n\r\n        String sql = \"SELECT * FROM rating WHERE name=?\";\r\n        List<Integer> ratingId = jdbcTemplate.query(sql, (rs, rowNum) -> rs.getInt(\"id\"), ratingName);\r\n\r\n        if (ratingId.isEmpty()) {\r\n            throw new NotFoundException(\"No ratingName under such ID in DB found\");\r\n        }\r\n        return ratingId.getLast();\r\n    }\r\n\r\n    /**\r\n     * Finds the ID of a genre in the database by its enum value.\r\n     *\r\n     * @param genreType value of {@link GenreType}\r\n     * @return numeric ID of the genre from the database\r\n     * @throws NotFoundException if the genre does not exist in the database\r\n     */\r\n    private int findIdByGenreType(GenreType genreType) {\r\n        String genreName = transformGenreTypeToGenreName(genreType);\r\n\r\n        String sql = \"SELECT * FROM genre WHERE name=?\";\r\n        List<Integer> genreId = jdbcTemplate.query(sql, (rs, rowNum) -> rs.getInt(\"id\"), genreName);\r\n\r\n        if (genreId.isEmpty()) {\r\n            throw new NotFoundException(\"No genreName under such ID in DB found\");\r\n        }\r\n        return genreId.getLast();\r\n    }\r\n\r\n    /**\r\n     * Converts a genre name from the database into {@link GenreType}.\r\n     *\r\n     * @param genreString string value of genre from the genre table\r\n     * @return corresponding enum value of GenreType\r\n     * @throws NotFoundException if the genre name is not recognized\r\n     */\r\n    private GenreType transformGenreNameToGenreType(String genreString) {\r\n        switch (genreString) {\r\n            case (\"comedy\"):\r\n                return GenreType.COMEDY;\r\n            case (\"drama\"):\r\n                return GenreType.DRAMA;\r\n            case (\"cartoon\"):\r\n                return GenreType.CARTOON;\r\n            case (\"thriller\"):\r\n                return GenreType.THRILLER;\r\n            case (\"documentary\"):\r\n                return GenreType.DOCUMENTARY;\r\n            case (\"action\"):\r\n                return GenreType.ACTION;\r\n            default:\r\n                throw new NotFoundException(\"No such GenreType found\");\r\n        }\r\n    }\r\n\r\n    /**\r\n     * Converts a {@link GenreType} enum into its string representation for database storage.\r\n     *\r\n     * @param genreType enum value of genre\r\n     * @return string representation of genre (e.g., \"comedy\")\r\n     * @throws NotFoundException if the genre is not recognized\r\n     */\r\n    private String transformGenreTypeToGenreName(GenreType genreType) {\r\n        switch (genreType) {\r\n            case COMEDY:\r\n                return \"comedy\";\r\n            case DRAMA:\r\n                return \"drama\";\r\n            case CARTOON:\r\n                return \"cartoon\";\r\n            case THRILLER:\r\n                return \"thriller\";\r\n            case DOCUMENTARY:\r\n                return \"documentary\";\r\n            case ACTION:\r\n                return \"action\";\r\n            default:\r\n                throw new NotFoundException(\"No such GenreType found\");\r\n        }\r\n    }\r\n\r\n    /**\r\n     * Converts a rating name from the database into {@link RatingType}.\r\n     *\r\n     * @param ratingString string value of rating (e.g., \"PG-13\")\r\n     * @return corresponding enum value of RatingType\r\n     * @throws NotFoundException if the rating name is not recognized\r\n     */\r\n    private RatingType transformRatingNameToRatingType(String ratingString) {\r\n        switch (ratingString) {\r\n            case (\"G\"):\r\n                return RatingType.G;\r\n            case (\"PG\"):\r\n                return RatingType.PG;\r\n            case (\"PG-13\"):\r\n                return RatingType.PG_13;\r\n            case (\"R\"):\r\n                return RatingType.R;\r\n            case (\"NC-17\"):\r\n                return RatingType.NC_17;\r\n            default:\r\n                throw new NotFoundException(\"No such RatingType found\");\r\n        }\r\n    }\r\n\r\n    /**\r\n     * Converts a {@link RatingType} enum into its string representation for database storage.\r\n     *\r\n     * @param ratingType enum value of rating\r\n     * @return string representation of rating (e.g., \"R\")\r\n     * @throws NotFoundException if the rating is not recognized\r\n     */\r\n    private String transformRatingTypeToRatingName(RatingType ratingType) {\r\n        switch (ratingType) {\r\n            case G:\r\n                return \"G\";\r\n            case PG:\r\n                return \"PG\";\r\n            case PG_13:\r\n                return \"PG-13\";\r\n            case R:\r\n                return \"R\";\r\n            case NC_17:\r\n                return \"NC-17\";\r\n            default:\r\n                throw new NotFoundException(\"No such RatingType in RatingType\");\r\n        }\r\n    }\r\n}\r\n",
+      "info": {
+        "size": 20149,
+        "last_modified": "2025-09-12T21:42:57.0236573",
+        "mime_type": "text/x-java-source",
+        "extension": ".java"
+      }
+    },
+    {
+      "path": "main\\java\\com\\filmorate\\storage\\film\\FilmStorage.java",
+      "content": "package com.filmorate.storage.film;\r\n\r\nimport com.filmorate.model.Film;\r\nimport com.filmorate.model.FilmLike;\r\nimport com.filmorate.model.GenreType;\r\nimport com.filmorate.model.RatingType;\r\n\r\nimport java.util.List;\r\nimport java.util.Optional;\r\n\r\n/**\r\n * Storage interface for managing {@link Film} entities and related data such as likes, genres, and ratings.\r\n * <p>\r\n * Defines the contract for all operations on films, including CRUD, likes management,\r\n * genre association, and rating retrieval.\r\n */\r\npublic interface FilmStorage {\r\n\r\n    List<Film> getAllFilms();\r\n\r\n    Film getFilmById(int id);\r\n\r\n    Film addFilm(Film film);\r\n\r\n    Film updateFilm(Film film);\r\n\r\n    List<FilmLike> getLikesByFilmId(int filmId);\r\n\r\n    Optional<FilmLike> getFilmLike(int filmId, int userId);\r\n\r\n    FilmLike addLike(int filmId, int userId);\r\n\r\n    void deleteLike(int filmId, int userId);\r\n\r\n    List<Film> findMostPopularFilms(int count);\r\n\r\n    List<GenreType> findAllGenres();\r\n\r\n    GenreType findGenreById(int genreId);\r\n\r\n    List<GenreType> findGenreByFilmId(int genreId);\r\n\r\n    List<GenreType> addGenreToFilm(int filmId, List<String> genreList);\r\n\r\n    List<RatingType> findAllRatings();\r\n\r\n    RatingType findRatingById(int ratingId);\r\n\r\n    RatingType findRatingByFilmId(int filmId);\r\n}\r\n",
+      "info": {
+        "size": 1293,
+        "last_modified": "2025-09-12T21:42:57.028656",
+        "mime_type": "text/x-java-source",
+        "extension": ".java"
+      }
+    },
+    {
+      "path": "main\\java\\com\\filmorate\\storage\\film\\InMemoryFilmStorage.java",
+      "content": "package com.filmorate.storage.film;\r\n\r\nimport jakarta.validation.Valid;\r\nimport jakarta.validation.constraints.NotNull;\r\nimport lombok.extern.slf4j.Slf4j;\r\nimport org.springframework.beans.factory.annotation.Autowired;\r\nimport org.springframework.beans.factory.annotation.Qualifier;\r\nimport org.springframework.stereotype.Repository;\r\nimport com.filmorate.excepsion.*;\r\nimport com.filmorate.excepsion.film.FilmAlreadyExistException;\r\nimport com.filmorate.excepsion.film.FilmNotFoundException;\r\nimport com.filmorate.excepsion.filmLike.FilmLikeAlreadyExistException;\r\nimport com.filmorate.excepsion.filmLike.FilmLikeNotFoundException;\r\nimport com.filmorate.excepsion.gender.GenreAlreadyExistException;\r\nimport com.filmorate.excepsion.gender.GenreNotFoundException;\r\nimport com.filmorate.excepsion.rating.RatingNotFoundException;\r\nimport com.filmorate.model.*;\r\nimport com.filmorate.storage.user.UserStorage;\r\n\r\nimport java.util.*;\r\nimport java.util.stream.Collectors;\r\n\r\nimport static java.util.stream.Collectors.summingInt;\r\n\r\n/**\r\n * In-memory implementation of {@link FilmStorage}.\r\n * <p>\r\n * Stores films, likes, genres, and ratings in local collections.\r\n * Intended for testing or prototyping purposes, not for production use.\r\n */\r\n@Repository(\"inMemoryFilmStorage\")\r\n@Slf4j\r\npublic class InMemoryFilmStorage implements FilmStorage {\r\n\r\n    private final Map<Integer, Film> films = new HashMap<>();\r\n    private final Set<FilmLike> filmLikes = new HashSet<>();\r\n    private final Map<Integer, Genre> filmGenres = new HashMap<>();\r\n    private final Map<Integer, RatingType> ratingTypes = new HashMap<>();\r\n\r\n    private int filmNextId = 1;\r\n    private int genreNextId = 1;\r\n    private int ratingNextId = 1;\r\n\r\n    @Autowired\r\n    @Qualifier(\"inMemoryUserStorage\")\r\n    private UserStorage userStorage;\r\n\r\n    @Override\r\n    public List<Film> getAllFilms() {\r\n        if (films.isEmpty()) {\r\n            throw new FilmNotFoundException(\"No films available\");\r\n        }\r\n        log.info(\"Retrieved {} films\", films.size());\r\n        return new ArrayList<>(films.values());\r\n    }\r\n\r\n    @Override\r\n    public Film getFilmById(int id) {\r\n        return Optional.ofNullable(films.get(id))\r\n                .orElseThrow(() -> new FilmNotFoundException(\"Film with ID \" + id + \" not found\"));\r\n    }\r\n\r\n    @Override\r\n    public Film addFilm(Film film) {\r\n        boolean exists = films.values().stream()\r\n                .anyMatch(f -> f.getName().equals(film.getName())\r\n                        && f.getReleaseDate().equals(film.getReleaseDate()));\r\n        if (exists) {\r\n            throw new FilmAlreadyExistException(\"Film already exists\");\r\n        }\r\n\r\n        film.setId(generateFilmId());\r\n        films.put(film.getId(), film);\r\n        log.info(\"Saved film: {}\", film);\r\n        return film;\r\n    }\r\n\r\n    @Override\r\n    public Film updateFilm(@NotNull @Valid Film film) {\r\n        if (!films.containsKey(film.getId())) {\r\n            throw new FilmNotFoundException(\"Film with ID \" + film.getId() + \" not found\");\r\n        }\r\n        films.put(film.getId(), film);\r\n\r\n        log.info(\"Updated film: {}\", film);\r\n        return film;\r\n    }\r\n\r\n    @Override\r\n    public List<FilmLike> getLikesByFilmId(int filmId) {\r\n        getFilmById(filmId); // ensure film exists\r\n\r\n        List<FilmLike> foundFilmLikes = filmLikes.stream()\r\n                .filter(filmLike -> filmLike.getFilm().getId() == filmId)\r\n                .toList();\r\n\r\n        if (foundFilmLikes.isEmpty()) {\r\n            throw new FilmLikeNotFoundException(\"No likes for film with ID \" + filmId);\r\n        }\r\n\r\n        log.info(\"Retrieved {} likes for film {}\", foundFilmLikes.size(), filmId);\r\n        return foundFilmLikes;\r\n    }\r\n\r\n    @Override\r\n    public Optional<FilmLike> getFilmLike(int filmId, int userId) {\r\n        return filmLikes.stream()\r\n                .filter(filmLike -> filmLike.getFilm().getId() == filmId && filmLike.getUser().getId() == userId)\r\n                .findFirst();\r\n    }\r\n\r\n    @Override\r\n    public FilmLike addLike(int filmId, int userId) {\r\n        Film film = getFilmById(userId); // ensure film exists\r\n        User user = userStorage.getUserById(userId); // ensure user exists\r\n\r\n        if (getFilmLike(filmId, userId).isPresent()) {\r\n            throw new FilmLikeAlreadyExistException(\r\n                    String.format(\"User %s already liked film %s\", userId, filmId));\r\n        }\r\n        FilmLike filmLike = new FilmLike(film, user);\r\n        filmLikes.add(filmLike);\r\n\r\n        log.info(\"Added like: {}\", filmLike);\r\n        return filmLike;\r\n    }\r\n\r\n    @Override\r\n    public void deleteLike(int filmId, int userId) {\r\n        getFilmById(userId); // ensure film exists\r\n        userStorage.getUserById(userId); // ensure user exists\r\n\r\n        FilmLike filmLike = getFilmLike(filmId, userId)\r\n                .orElseThrow(() -> new FilmLikeNotFoundException(\r\n                        String.format(\"User %s has no like for film %s\", userId, filmId)));\r\n\r\n        filmLikes.remove(filmLike);\r\n        log.info(\"Deleted like: {}\", filmLike);\r\n    }\r\n\r\n    @Override\r\n    public List<Film> findMostPopularFilms(int count) {\r\n        Map<Film, Integer> mostPopularFilms = filmLikes.stream()\r\n                .collect(Collectors.groupingBy(FilmLike::getFilm, summingInt(e -> 1)));\r\n\r\n        log.info(\"Total liked films: {}\", mostPopularFilms.size());\r\n\r\n        return mostPopularFilms.entrySet()\r\n                .stream()\r\n                .sorted(Map.Entry.<Film, Integer>comparingByValue().reversed())\r\n                .map(Map.Entry::getKey)\r\n                .limit(count)\r\n                .toList();\r\n    }\r\n\r\n    @Override\r\n    public List<GenreType> findAllGenres() {\r\n        if (filmGenres.isEmpty()) {\r\n            throw new GenreNotFoundException(\"No genres available\");\r\n        }\r\n        log.info(\"Retrieved {} genres\", filmGenres.size());\r\n        return filmGenres.values().stream().map(Genre::getGenreType).toList();\r\n    }\r\n\r\n    @Override\r\n    public GenreType findGenreById(int genreId) {\r\n        return Optional.ofNullable(filmGenres.get(genreId))\r\n                .map(Genre::getGenreType)\r\n                .orElseThrow(() -> new GenreNotFoundException(\"Genre with ID \" + genreId + \" not found\"));\r\n    }\r\n\r\n    @Override\r\n    public List<GenreType> findGenreByFilmId(int filmId) {\r\n        getFilmById(filmId); // ensure film exists\r\n\r\n        List<GenreType> genres = filmGenres.values().stream()\r\n                .filter(genre -> genre.getFilms().contains(films.get(filmId)))\r\n                .map(Genre::getGenreType)\r\n                .toList();\r\n\r\n        log.info(\"Retrieved {} genres for film {}\", genres.size(), filmId);\r\n        return genres;\r\n    }\r\n\r\n    @Override\r\n    public List<GenreType> addGenreToFilm(int filmId, List<String> genreList) {\r\n        Film film = getFilmById(filmId);\r\n\r\n        for (String genreString : genreList) {\r\n            GenreType genreType = transformGenreNameToGenreType(genreString);\r\n\r\n            Genre genre = filmGenres.values().stream()\r\n                    .filter(g -> g.getGenreType().equals(genreType))\r\n                    .toList().getLast();\r\n\r\n            if (genre.getFilms().contains(film)) {\r\n                throw new GenreAlreadyExistException(\"Genre already exists by this film\");\r\n            }\r\n            genre.getFilms().add(film);\r\n        }\r\n        return findGenreByFilmId(filmId);\r\n    }\r\n\r\n    @Override\r\n    public List<RatingType> findAllRatings() {\r\n        return Arrays.asList(RatingType.values());\r\n    }\r\n\r\n    @Override\r\n    public RatingType findRatingById(int ratingId) {\r\n        return Optional.ofNullable(ratingTypes.get(ratingId))\r\n                .orElseThrow(() -> new RatingNotFoundException(\"Rating with ID \" + ratingId + \" not found\"));\r\n    }\r\n\r\n    @Override\r\n    public RatingType findRatingByFilmId(int filmId) {\r\n        return films.get(filmId).getRating();\r\n    }\r\n\r\n    public int generateFilmId() {\r\n        return filmNextId++;\r\n    }\r\n\r\n    //-----------------------\r\n    //Private helpers methods\r\n    //-----------------------\r\n\r\n    private int generateGenreId() {\r\n        return genreNextId++;\r\n    }\r\n\r\n    private int generateRatingId() {\r\n        return ratingNextId++;\r\n    }\r\n\r\n    /**\r\n     * Converts a string representation of a genre to a {@link GenreType}.\r\n     *\r\n     * @param genreString the genre string, e.g., \"comedy\", \"drama\"\r\n     * @return the corresponding {@link GenreType}\r\n     * @throws NotFoundException if no match is found\r\n     */\r\n    private GenreType transformGenreNameToGenreType(String genreString) {\r\n        return switch (genreString) {\r\n            case (\"comedy\") -> GenreType.COMEDY;\r\n            case (\"drama\") -> GenreType.DRAMA;\r\n            case (\"cartoon\") -> GenreType.CARTOON;\r\n            case (\"thriller\") -> GenreType.THRILLER;\r\n            case (\"documentary\") -> GenreType.DOCUMENTARY;\r\n            case (\"action\") -> GenreType.ACTION;\r\n            default -> throw new NotFoundException(\"No such GenreType found\");\r\n        };\r\n    }\r\n}\r\n",
+      "info": {
+        "size": 9057,
+        "last_modified": "2025-09-12T21:42:57.0326513",
+        "mime_type": "text/x-java-source",
+        "extension": ".java"
+      }
+    },
+    {
+      "path": "main\\java\\com\\filmorate\\storage\\user\\InMemoryUserStorage.java",
+      "content": "package com.filmorate.storage.user;\r\n\r\nimport lombok.extern.slf4j.Slf4j;\r\nimport org.springframework.stereotype.Repository;\r\nimport com.filmorate.excepsion.friendship.FriendshipAlreadyExistException;\r\nimport com.filmorate.excepsion.friendship.FriendshipNotFoundException;\r\nimport com.filmorate.excepsion.user.UserAlreadyExistException;\r\nimport com.filmorate.excepsion.user.UserNotFoundException;\r\nimport com.filmorate.model.Friendship;\r\nimport com.filmorate.model.User;\r\n\r\nimport java.util.ArrayList;\r\nimport java.util.HashMap;\r\nimport java.util.List;\r\nimport java.util.Optional;\r\nimport java.util.stream.Collectors;\r\n\r\n/**\r\n * In-memory implementation of {@link UserStorage}.\r\n * <p>\r\n * Stores users and friendships in HashMaps.\r\n * Intended for testing and prototyping purposes.\r\n */\r\n@Repository(\"inMemoryUserStorage\")\r\n@Slf4j\r\npublic class InMemoryUserStorage implements UserStorage {\r\n\r\n    private final HashMap<Integer, User> users = new HashMap<>();\r\n    private final HashMap<Integer, Friendship> friendships = new HashMap<>();\r\n\r\n    private int nextUserId = 1;\r\n    private int nextFriendshipId = 1;\r\n\r\n    @Override\r\n    public List<User> getAllUsers() {\r\n        if (users.isEmpty()) {\r\n            throw new UserNotFoundException(\"No users available\");\r\n        }\r\n        log.info(\"Retrieved {} users\", users.size());\r\n        return new ArrayList<>(users.values());\r\n    }\r\n\r\n    @Override\r\n    public User getUserById(int id) {\r\n        return Optional.ofNullable(users.get(id))\r\n                .orElseThrow(() -> new UserNotFoundException(\"User with ID \" + id + \" not found\"));\r\n    }\r\n\r\n    @Override\r\n    public User addUser(User user) {\r\n        boolean exists = users.values().stream()\r\n                .anyMatch(existingUser -> existingUser.getEmail().equals(user.getEmail()));\r\n\r\n        if (exists) {\r\n            throw new UserAlreadyExistException(\"User with email \" + user.getEmail() + \" already exists\");\r\n        }\r\n\r\n        user.setId(generateUserId());\r\n        users.put(user.getId(), user);\r\n\r\n        log.info(\"Added user: {}\", user);\r\n        return user;\r\n    }\r\n\r\n    @Override\r\n    public User updateUser(User user) {\r\n        if (!users.containsKey(user.getId())) {\r\n            throw new UserNotFoundException(\"User with ID \" + user.getId() + \" not found\");\r\n        }\r\n        users.put(user.getId(), user);\r\n\r\n        log.info(\"Updated user: {}\", user);\r\n        return user;\r\n    }\r\n\r\n    @Override\r\n    public Friendship addFriend(Friendship friendship) {\r\n        int userId = friendship.getUser().getId();\r\n        int friendId = friendship.getFriend().getId();\r\n\r\n        if (getFriendship(userId, friendId).isPresent()) {\r\n            throw new FriendshipAlreadyExistException(\r\n                    String.format(\"User %s already has user %s as friend\", userId, friendId));\r\n        }\r\n\r\n        friendship.setId(generateFriendshipId());\r\n        friendships.put(friendship.getId(), friendship);\r\n\r\n        log.info(\"Added friendship: {}\", friendship);\r\n        return friendship;\r\n    }\r\n    @Override\r\n    public void updateFriendship(Friendship friendship) {\r\n        friendships.put(friendship.getId(), friendship);\r\n        log.info(\"Updated friendship: {}\", friendship);\r\n    }\r\n\r\n    @Override\r\n    public Optional<Friendship> getFriendship(int userId, int friendId) {\r\n        return friendships.values().stream()\r\n                .filter(f -> f.getUser().getId() == userId && f.getFriend().getId() == friendId)\r\n                .findFirst();\r\n    }\r\n\r\n    @Override\r\n    public void deleteFriend(Friendship friendship) {\r\n        friendships.remove(friendship.getId());\r\n        log.info(\"Deleted friendship: {}\", friendship);\r\n    }\r\n\r\n    @Override\r\n    public List<User> findFriends(int userId) {\r\n        getUserById(userId); // ensure user exists\r\n\r\n        List<User> friends = friendships.values().stream()\r\n                .filter(f -> f.getUser().getId() == userId)\r\n                .map(Friendship::getFriend)\r\n                .collect(Collectors.toList());\r\n\r\n        if (friends.isEmpty()) {\r\n            throw new FriendshipNotFoundException(\"User with ID \" + userId + \" has no friends\");\r\n        }\r\n\r\n        log.info(\"Retrieved {} friends for user {}\", friends.size(), userId);\r\n        return friends;\r\n    }\r\n\r\n    //-----------------------\r\n    //Private helpers methods\r\n    //-----------------------\r\n\r\n    private int generateUserId() {\r\n        return nextUserId++;\r\n    }\r\n\r\n    private int generateFriendshipId() {\r\n        return nextFriendshipId++;\r\n    }\r\n}\r\n",
+      "info": {
+        "size": 4548,
+        "last_modified": "2025-09-12T21:42:57.0376515",
+        "mime_type": "text/x-java-source",
+        "extension": ".java"
+      }
+    },
+    {
+      "path": "main\\java\\com\\filmorate\\storage\\user\\UserDbStorage.java",
+      "content": "package com.filmorate.storage.user;\r\n\r\nimport lombok.extern.slf4j.Slf4j;\r\nimport org.springframework.beans.factory.annotation.Autowired;\r\nimport org.springframework.jdbc.core.JdbcTemplate;\r\nimport org.springframework.jdbc.support.GeneratedKeyHolder;\r\nimport org.springframework.jdbc.support.KeyHolder;\r\nimport org.springframework.stereotype.Repository;\r\nimport com.filmorate.excepsion.friendship.FriendshipAlreadyExistException;\r\nimport com.filmorate.excepsion.friendship.FriendshipNotFoundException;\r\nimport com.filmorate.excepsion.user.UserAlreadyExistException;\r\nimport com.filmorate.excepsion.user.UserNotFoundException;\r\nimport com.filmorate.model.Friendship;\r\nimport com.filmorate.model.User;\r\n\r\nimport java.sql.Date;\r\nimport java.sql.PreparedStatement;\r\nimport java.sql.ResultSet;\r\nimport java.sql.SQLException;\r\nimport java.time.LocalDate;\r\nimport java.util.List;\r\nimport java.util.Objects;\r\nimport java.util.Optional;\r\nimport java.util.stream.Collectors;\r\n\r\n/**\r\n * Database-backed implementation of {@link UserStorage}.\r\n * <p>\r\n * Stores users and friendships in a relational database using {@link JdbcTemplate}.\r\n * Provides CRUD operations and friendship management.\r\n */\r\n@Slf4j\r\n@Repository(\"userDbStorage\")\r\npublic class UserDbStorage implements UserStorage {\r\n\r\n    private final JdbcTemplate jdbcTemplate;\r\n\r\n    @Autowired\r\n    public UserDbStorage(JdbcTemplate jdbcTemplate) {\r\n        this.jdbcTemplate = jdbcTemplate;\r\n    }\r\n\r\n    @Override\r\n    public List<User> getAllUsers() {\r\n        String sql = \"SELECT * FROM app_user ORDER BY id\";\r\n        List<User> allUsers = jdbcTemplate.query(sql, (rs, rowNum) -> makeUser(rs));\r\n\r\n        log.info(\"Retrieved {} users\", allUsers.size());\r\n        return allUsers;\r\n    }\r\n\r\n    @Override\r\n    public User getUserById(int id) {\r\n        String sql = \"SELECT * FROM app_user WHERE id=?\";\r\n        List<User> userList = jdbcTemplate.query(sql, (rs, rowNum) -> makeUser(rs), id);\r\n\r\n        if (userList.isEmpty()) {\r\n            throw new UserNotFoundException(\"No user under such ID found\");\r\n        }\r\n        return userList.getLast();\r\n    }\r\n\r\n    @Override\r\n    public User addUser(User user) {\r\n        boolean exists = getAllUsers().stream()\r\n                .anyMatch(u -> u.getEmail().equals(user.getEmail()));\r\n        if (exists) {\r\n            throw new UserAlreadyExistException(\"User with email \" + user.getEmail() + \" already exists\");\r\n        }\r\n\r\n        String sql = \"INSERT INTO app_user (login, name, email, birthday) \" +\r\n                     \"VALUES (?, ?, ?, ?)\";\r\n        String login = user.getLogin();\r\n        String name = user.getName();\r\n        String email = user.getEmail();\r\n        Date birthday = Date.valueOf(user.getBirthday());\r\n\r\n        KeyHolder keyHolder = new GeneratedKeyHolder();\r\n        int qnt = jdbcTemplate.update(connection -> {\r\n            PreparedStatement stmt = connection.prepareStatement(sql, new String[]{\"id\"});\r\n            stmt.setString(1, login);\r\n            stmt.setString(2, name);\r\n            stmt.setString(3, email);\r\n            stmt.setDate(4, birthday);\r\n            return stmt;\r\n        }, keyHolder);\r\n        log.info(\"Added {} new records to table app_user\", qnt);\r\n\r\n        int id = Objects.requireNonNull(keyHolder.getKey()).intValue();\r\n        return getUserById(id);\r\n    }\r\n\r\n    @Override\r\n    public User updateUser(User user) {\r\n        getUserById(user.getId()); // ensure user exists\r\n\r\n        String sql = \"UPDATE app_user \" +\r\n                     \"SET login=?, name=?, email=?, birthday=? \" +\r\n                     \"WHERE id=?\";\r\n        String login = user.getLogin();\r\n        String name = user.getName();\r\n        String email = user.getEmail();\r\n        Date birthday = Date.valueOf(user.getBirthday());\r\n        int id = user.getId();\r\n\r\n        int qnt = jdbcTemplate.update(sql, login, name, email, birthday, id);\r\n        log.info(\"Updated {} records by table app_user\", qnt);\r\n\r\n        return getUserById(id);\r\n    }\r\n\r\n    @Override\r\n    public Friendship addFriend(Friendship friendship) {\r\n        int userId = friendship.getUser().getId();\r\n        int friendId = friendship.getFriend().getId();\r\n\r\n        if (getFriendship(userId, friendId).isPresent()) {\r\n            throw new FriendshipAlreadyExistException(\r\n                    String.format(\"User %s already has user %s as friend\", userId, friendId));\r\n        }\r\n\r\n        String sql = \"INSERT INTO friendship (user_id, friend_id, status) \" +\r\n                     \"VALUES (?, ?, ?)\";\r\n        boolean status = friendship.getStatus();\r\n\r\n        int qnt = jdbcTemplate.update(sql, userId, friendId, status);\r\n        log.info(\"Added {} new records to table friendship\", qnt);\r\n\r\n        Optional<Friendship> newFriendship = getFriendship(userId, friendId);\r\n        if (newFriendship.isEmpty()) {\r\n            log.error(\"Friendship between {} and {} not found after adding to DB!\", userId, friendId);\r\n            throw new FriendshipNotFoundException(\r\n                    String.format(\"Error by adding new friendship between %s and %s\", userId, friendId));\r\n        }\r\n        return newFriendship.get();\r\n    }\r\n\r\n    @Override\r\n    public void updateFriendship(Friendship friendship) {\r\n        String sql = \"UPDATE friendship \" +\r\n                     \"SET status=? \" +\r\n                     \"WHERE id=?\";\r\n        int id = friendship.getId();\r\n        boolean status = friendship.getStatus();\r\n\r\n        int qnt = jdbcTemplate.update(sql, status, id);\r\n        log.info(\"Updated {} records by table friendship\", qnt);\r\n    }\r\n\r\n    @Override\r\n    public Optional<Friendship> getFriendship(int userId, int friendId) {\r\n        String sql = \"SELECT * FROM friendship WHERE user_id=? AND friend_id=?\";\r\n        List<Friendship> friendshipList = jdbcTemplate.query(sql, (rs, rowNum) -> makeFriendship(rs), userId, friendId);\r\n\r\n        if (friendshipList.isEmpty()) {\r\n            return Optional.empty();\r\n        }\r\n        return Optional.of(friendshipList.getLast());\r\n    }\r\n\r\n    @Override\r\n    public void deleteFriend(Friendship friendship) {\r\n        String sql = \"DELETE FROM friendship WHERE id=?\";\r\n        int id = friendship.getId();\r\n\r\n        int qnt = jdbcTemplate.update(sql, id);\r\n        log.info(\"Deleted {} records from table friendship\", qnt);\r\n    }\r\n\r\n    @Override\r\n    public List<User> findFriends(int userId) {\r\n        getUserById(userId); // ensure user exists\r\n\r\n        String sql = \"SELECT * FROM friendship WHERE user_id=?\";\r\n        List<Friendship> allFriendships = jdbcTemplate.query(sql, (rs, rowNum) -> makeFriendship(rs), userId);\r\n\r\n        if (allFriendships.isEmpty()) {\r\n            throw new FriendshipNotFoundException(\"User \" + userId + \" has no friends\");\r\n        }\r\n\r\n        List<User> allFriends = allFriendships.stream()\r\n                .map(Friendship::getFriend)\r\n                .collect(Collectors.toList());\r\n\r\n        log.info(\"Retrieved {} friends for user {}\", allFriends.size(), userId);\r\n        return allFriends;\r\n    }\r\n\r\n    //-----------------------\r\n    //Private helpers methods\r\n    //-----------------------\r\n\r\n    /**\r\n     * Maps a SQL result set to a {@link User} object.\r\n     *\r\n     * @param rs the ResultSet\r\n     * @return a User object\r\n     * @throws SQLException if mapping fails\r\n     */\r\n    private User makeUser(ResultSet rs) throws SQLException {\r\n        int id = rs.getInt(\"id\");\r\n        String login = rs.getString(\"login\");\r\n        String name = rs.getString(\"name\");\r\n        String email = rs.getString(\"email\");\r\n        LocalDate birthday = rs.getDate(\"birthday\").toLocalDate();\r\n\r\n        return new User(id, login, name, email, birthday);\r\n    }\r\n\r\n    /**\r\n     * Maps a SQL result set to a {@link Friendship} object.\r\n     *\r\n     * @param rs the ResultSet\r\n     * @return a Friendship object\r\n     * @throws SQLException if mapping fails\r\n     */\r\n    private Friendship makeFriendship(ResultSet rs) throws SQLException {\r\n        int id = rs.getInt(\"id\");\r\n        int userId = rs.getInt(\"user_id\");\r\n        int friendId = rs.getInt(\"friend_id\");\r\n        boolean status = rs.getBoolean(\"status\");\r\n\r\n        return new Friendship(id, getUserById(userId), getUserById(friendId), status);\r\n    }\r\n}\r\n",
+      "info": {
+        "size": 8250,
+        "last_modified": "2025-09-12T21:42:57.0406515",
+        "mime_type": "text/x-java-source",
+        "extension": ".java"
+      }
+    },
+    {
+      "path": "main\\java\\com\\filmorate\\storage\\user\\UserStorage.java",
+      "content": "package com.filmorate.storage.user;\r\n\r\nimport com.filmorate.model.Friendship;\r\nimport com.filmorate.model.User;\r\n\r\nimport java.util.List;\r\nimport java.util.Optional;\r\n\r\n/**\r\n * Interface defining storage operations for {@link User} and {@link Friendship}.<br>\r\n * Implementations may store data in memory or in a database.\r\n */\r\npublic interface UserStorage {\r\n\r\n    List<User> getAllUsers();\r\n\r\n    User getUserById(int id);\r\n\r\n    User addUser(User user);\r\n\r\n    User updateUser(User user);\r\n\r\n    Friendship addFriend(Friendship friendship);\r\n\r\n    void updateFriendship(Friendship friendship);\r\n\r\n    Optional<Friendship> getFriendship(int userId, int friendId);\r\n\r\n    void deleteFriend(Friendship friendship);\r\n\r\n    List<User> findFriends(int userId);\r\n}\r\n",
+      "info": {
+        "size": 763,
+        "last_modified": "2025-09-12T21:42:57.0436512",
+        "mime_type": "text/x-java-source",
+        "extension": ".java"
+      }
+    },
+    {
+      "path": "main\\resources\\application.properties",
+      "content": "# Database Initialization\r\nspring.sql.init.mode=always\r\n\r\n# DataSource Configuration\r\nspring.datasource.url=jdbc:h2:file:./db/filmorate\r\nspring.datasource.driverClassName=org.h2.Driver\r\nspring.datasource.username=sa\r\nspring.datasource.password=password\r\n",
+      "info": {
+        "size": 254,
+        "last_modified": "2025-09-12T21:42:57.0556529",
+        "mime_type": "text/x-java-properties",
+        "extension": ".properties"
+      }
+    },
+    {
+      "path": "main\\resources\\schema.sql",
+      "content": "CREATE TABLE IF NOT EXISTS app_user (\r\n  id INTEGER GENERATED BY DEFAULT AS IDENTITY PRIMARY KEY,\r\n  login varchar,\r\n  name varchar,\r\n  email varchar,\r\n  birthday date\r\n);\r\n\r\nCREATE TABLE IF NOT EXISTS friendship (\r\n  id INTEGER GENERATED BY DEFAULT AS IDENTITY PRIMARY KEY,\r\n  user_id INTEGER REFERENCES app_user (id),\r\n  friend_id INTEGER REFERENCES app_user (id),\r\n  status boolean\r\n);\r\n\r\nCREATE TABLE IF NOT EXISTS rating (\r\n  id INTEGER GENERATED BY DEFAULT AS IDENTITY PRIMARY KEY,\r\n  name varchar\r\n);\r\n\r\nCREATE TABLE IF NOT EXISTS film (\r\n  id INTEGER GENERATED BY DEFAULT AS IDENTITY PRIMARY KEY,\r\n  name varchar,\r\n  description text,\r\n  rating_id INTEGER REFERENCES rating (id),\r\n  release_date date,\r\n  duration INTEGER\r\n);\r\n\r\nCOMMENT ON COLUMN film.duration IS 'in_minutes';\r\n\r\nCREATE TABLE IF NOT EXISTS film_like (\r\n  user_id INTEGER REFERENCES app_user (id),\r\n  film_id INTEGER REFERENCES film (id),\r\n  PRIMARY KEY (user_id, film_id)\r\n);\r\n\r\nCREATE TABLE IF NOT EXISTS genre (\r\n  id INTEGER GENERATED BY DEFAULT AS IDENTITY PRIMARY KEY,\r\n  name varchar\r\n);\r\n\r\nCREATE TABLE IF NOT EXISTS film_genre (\r\n  film_id INTEGER REFERENCES film (id),\r\n  genre_id INTEGER REFERENCES genre (id),\r\n  PRIMARY KEY (film_id, genre_id)\r\n);",
+      "info": {
+        "size": 1235,
+        "last_modified": "2025-09-12T21:42:57.0606564",
+        "mime_type": "text/x-sql",
+        "extension": ".sql"
+      }
+    },
+    {
+      "path": "test\\java\\com\\filmorate\\FilmorateApplicationTests.java",
+      "content": "package com.filmorate;\r\n\r\nimport org.junit.jupiter.api.Test;\r\nimport org.springframework.boot.test.context.SpringBootTest;\r\n\r\n// TODO: add tests\r\n@SpringBootTest\r\nclass FilmorateApplicationTests {\r\n\r\n    @Test\r\n    void contextLoads() {\r\n    }\r\n}\r\n",
+      "info": {
+        "size": 248,
+        "last_modified": "2025-09-12T21:42:57.0676514",
+        "mime_type": "text/x-java-source",
+        "extension": ".java"
+      }
+    }
+  ]
+}
